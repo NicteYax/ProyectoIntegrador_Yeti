@@ -1,15 +1,22 @@
+* {
+    font-family: "Rajdhani";
+}
 /*Efecto de flip card*/
 .flip-card{
     background-color: transparent;
     width: 300px;
     height: 250px;
-    border: 1px solid #050505;
+    box-shadow: 0 0 10px #363636;
     perspective: 1000px;
-    padding: 10px;
-    margin: 10px;
+    padding: 5px;
+        margin: 8px;
     border-radius: 10px;
 }
 
+.imgIntegrants {
+    width: 60%;
+    height: auto;
+}
 .developersEffect {
     position:relative;
     width: 100%;
@@ -40,14 +47,16 @@
     background-color: #5188A9;
     color: #ffff;
     transform: rotateY(180deg);
+    text-align: center;
+        padding: 0.5rem;
 }
 
 /*Tablero de tarjetas*/
-.container{
+.container-fluid #integrants {
     display: flex;
     flex-wrap: wrap;
-    align-content: space-evenly;
+    align-content: center;
     justify-content: space-evenly;
-
-
+    padding-left: 2rem;
+        padding-right: 2-rem;
 }

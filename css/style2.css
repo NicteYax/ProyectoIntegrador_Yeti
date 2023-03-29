@@ -1,0 +1,105 @@
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.sectionAboutUs {
+    height: 57rem;
+    width: 83rem;
+    font-size: 1.5em;
+
+    background-image: url("/src/aboutUs/foto.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 40px;
+    margin-bottom: 40px;
+}
+
+@media screen {}
+
+
+.center {
+    height: 57rem;
+    width: 83rem;
+
+    background-image: url("/src/aboutUs/backgroundPic.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+
+.msnAboutUs {
+    width: 68rem;
+    height: 30rem;
+    margin: 0px auto;
+
+    background-color: aliceblue;
+    background: rgba(255, 255, 255, 0.7);
+
+    border-radius: 50px;
+    align-items: center;
+    padding: 100px;
+    justify-content: center;
+
+}
+
+.frase {
+    font-family: "Rajdhani";
+    /*  Rajdhani */
+    color: #043454;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.opacityTxt {
+    width: 66rem;
+    height: 11rem;
+    margin: 0px auto;
+
+    border-color: #848483;
+    background-color: rgba(132, 132, 131, 0.5);
+    color: #1C243C;
+
+    border-radius: 25px;
+
+    font-family: "Rajdhani";
+    /*  Rajdhani */
+    font-size: 2.5rem;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+}
+
+#mision {
+    font-size: 1.25rem;
+    text-align: justify;
+    padding-top: 5px;
+    text-align: justify;
+
+}
+
+#vision {
+    font-size: 1.25rem;
+    text-align: justify;
+    padding-top: 5px;
+    text-align: justify;
+}
