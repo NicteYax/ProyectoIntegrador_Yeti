@@ -25,7 +25,14 @@
     margin-bottom: 40px;
 }
 
-@media screen {}
+@media(min-width:600px) {
+    .sectionAboutUs {
+        grid-template-columns: 200px auto;
+        grid-template-rows: 100px 50px auto 100px;
+        grid-template-areas:
+            "msnAboutUs"
+    }
+}
 
 
 .center {

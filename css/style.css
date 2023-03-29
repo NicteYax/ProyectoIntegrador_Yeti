@@ -14,6 +14,16 @@
     width: 83rem;
 }
 
+@media(min-width:600px) {
+    .Menú {
+        grid-template-columns: 200px auto;
+        grid-template-rows: 100px 50px auto 100px;
+        grid-template-areas:
+            "pages pages"
+            "logo logo"
+            "socials socials"
+    }
+}
 .pages {
     display: flex;
     justify-content: center;
@@ -36,15 +46,17 @@
     height: 99px;
     width: 174.51116943359375px;
     border-radius: 0px;
-    position: absolute;
-    left: 627px;
+    /* position: absolute;
+            left: 627px; */
 }
 
 .socials {
-    position: absolute;
+    /* position: absolute;
     right: 30px;
     top: auto;
+        */
     width: fit-content;
+    float: right;
 }
 
 #car,
