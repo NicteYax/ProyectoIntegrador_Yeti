@@ -9,7 +9,6 @@
     box-shadow: 0 0 10px #363636;
     perspective: 1000px;
     padding: 5px;
-        margin: 8px;
     border-radius: 10px;
 }
 
@@ -52,11 +51,35 @@
 }
 
 /*Tablero de tarjetas*/
-.container-fluid #integrants {
+/* .container-fluid #integrants {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-evenly;
     padding-left: 2rem;
         padding-right: 2-rem;
+} */
+@media (min-width: 800px) {
+    .container-fluid> #integrants{
+        display: grid;
+        gap: 4rem;
+        grid-template-columns: repeat(3, 1fr);
+        width: fit-content;
+    }
+}
+@media (max-width: 780px) {
+    .container-fluid> #integrants{
+        display: grid;
+        gap: 4rem;
+        grid-template-columns: repeat(2, 1fr);
+        width: fit-content;
+    }
+}
+@media (max-width: 480px) {
+    .container-fluid> #integrants{
+        display: grid;
+        gap: 4rem;
+        grid-template-columns: repeat(1, 1fr);
+        width: fit-content;
+    }
 }

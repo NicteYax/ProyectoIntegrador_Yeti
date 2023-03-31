@@ -1,103 +1,174 @@
-.Menú {
-    background-color: rgb(29, 38, 64, 1);
-    color: #FFFFFF;
-    font-family: Rajdhani;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 31px;
-    letter-spacing: 2px;
-    text-align: center;
-    display: flex;
-    text-decoration: none;
+* {
+  font-family: "Rajdhani";
+}
+nav {
+  background-color: rgb(29, 38, 64, 1);
+}
+
+@media (min-width: 800px) {
+  nav > .barraContenedor {
+    display: grid;
+    grid-template-columns: repeat(9, 2fr);
+    justify-items: stretch;
+    grid-template-areas:
+      "pages pages pages"
+      "logo logo logo"
+      "socials socials socials";
     align-items: center;
-    height: 115px;
-    width: 83rem;
-}
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  #btnRight {
+    display: none;
+    visibility: hidden;
+  }
 
-@media(min-width:600px) {
-    .Menú {
-        grid-template-columns: 200px auto;
-        grid-template-rows: 100px 50px auto 100px;
-        grid-template-areas:
-            "pages pages"
-            "logo logo"
-            "socials socials"
-    }
-}
-.pages {
+  #pages {
+    grid-column: 1/4;
+    margin-left: 1rem;
+    font-size: xx-large;
+  }
+
+  #logo {
+    grid-column: 5/5;
+  }
+
+  #redSocials {
+    grid-column: 9/10;
+    grid-column-end: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-}
-
-#index,
-#cat,
-#custom {
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-.logo {
-    height: 99px;
-    width: 174.51116943359375px;
-    border-radius: 0px;
-    /* position: absolute;
-            left: 627px; */
-}
-
-.socials {
-    /* position: absolute;
-    right: 30px;
-    top: auto;
-        */
-    width: fit-content;
-    float: right;
-}
-
-#car,
-#log,
-#wap {
-    padding-left: 30px;
-}
-
-#footerREAL {
-    display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
+    justify-content: space-around;
+    align-content: end;
+  }
+  #footerREAL {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    justify-items: stretch;
+    grid-template-areas: " footer footer footer"
+    "footer2";
+  }
+  #footerREAL> .footer{
+    grid-column: 1/10;
+  }
+  #footerREAL> .footer2{
+    grid-column: 10/10;
+  }
+}
+
+@media (max-width: 770px) {
+  nav > .barraContenedor {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-areas:
+      "logo logo "
+      "socials socials";
+    align-items: center;
+  }
+
+  #pages {
+    display: none !important;
+  }
+
+  #logo {
+    grid-column: 1/3;
+  }
+
+  #redSocials {
+    grid-column: 5/7;
+    width: 13rem;
+  }
+  #footerREAL {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    justify-items: stretch;
+    grid-template-areas: " footer footer footer"
+    "footer2";
+  }
+  #footerREAL> .footer{
+    grid-column: 1/10;
+  }
+  #footerREAL> .footer2{
+    grid-column: 10/10;
+  }
+}
+
+@media (max-width: 480px) {
+    nav > .barraContenedor {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-areas:
+        "logo logo "
+        "socials socials";
+      align-items: center;
     }
-    
-    .footer {
-        text-align: center;
-            right: 0;
-            left: 0;
-            width: 90%;
-            height: 30px;
-            padding: 10px;
-            bottom: 5px;
-            font-family: 'Rajdhani';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 14px;
-            line-height: 14px;
-            color: #56758F;
-            background-color: rgb(29, 38, 64, 1);
-        clear: both;
-        }
-    
+  
+    #pages {
+      display: none !important;
+    }
+  
+    #logo {
+      grid-column: 1/3;
+    }
+  
+    #redSocials {
+      grid-column: 6/7;
+      width: 5rem;
+    }
+    #car,#log,#wap {        
+    width: 20px;
+    height: auto;}
+
+    #footerREAL {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      justify-items: stretch;
+      grid-template-areas: " footer footer footer"
+      "footer2";
+    }
+    #footerREAL> .footer{
+      grid-column: 1/10;
+      font-size: 10px;
+    }
+    #footerREAL> .footer2{
+      grid-column: 10/10;
+    }
+}
+
+.navbar-brand {
+  font-weight: bolder;
+}
+
+#offcanvasDarkNavbar{
+    background-color:rgb(29, 38, 64, 1);
+}
+
+.footer {
+  text-align: center;
+  right: 0;
+  left: 0;
+  height: 30px;
+  padding: 10px;
+  bottom: 5px;
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  color: #56758f;
+  background-color: rgb(29, 38, 64, 1);
+  clear: both;
+}
 .footer2 {
-        padding: 10px;
-            text-align: center;
-            width: 10%;
-            height: 30px;
-            bottom: 5px;
-            right: 5px;
-            background-color: #56758F;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-        clear: both;
+  padding: 10px;
+  text-align: center;
+  height: 30px;
+  bottom: 5px;
+  right: 5px;
+  background-color: #56758f;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  clear: both;
 }
