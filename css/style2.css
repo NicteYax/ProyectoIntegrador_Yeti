@@ -8,7 +8,7 @@
 @media (min-width: 800px) {
     .sectionAboutUs {
     height: 57rem;
-    width: 83rem;
+    width: 84.8rem;
     font-size: 1.5em;
 
     background-image: url("/src/aboutUs/foto.jpg");
@@ -22,11 +22,11 @@
 
     margin-bottom: 40px;
     margin-bottom: 40px;
-    margin-left: -15px;
+    margin-left: -20px;
     }
     .center {
         height: 57rem;
-        width: 83rem;
+        width: 84.8rem;
     
         background-image: url("/src/aboutUs/backgroundPic.jpg");
         background-size: cover;
@@ -37,7 +37,7 @@
         align-items: center;
         justify-content: center;
         margin-bottom: 40px;
-        margin-left: -15px;
+        margin-left: -20px;
     }
     
     
@@ -230,7 +230,7 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 40px;
-            margin-left: -15px;
+            margin-left: -px;
         }
         
         
