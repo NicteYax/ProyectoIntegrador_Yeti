@@ -41,7 +41,9 @@ nav {
     flex-direction: row;
     justify-content: space-around;
     align-content: end;
+    width: 11rem;
   }
+
   #footerREAL {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
@@ -94,7 +96,7 @@ nav {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 320px) {
     nav > .barraContenedor {
       display: grid;
       grid-template-columns: repeat(7, 1fr);
@@ -119,6 +121,12 @@ nav {
     #car,#log,#wap {        
     width: 20px;
     height: auto;}
+
+    #logoImg{
+      width: 120px;
+      height: 75px;
+      padding-left: 10px;
+    }
 
     #footerREAL {
       display: grid;
