@@ -101,14 +101,13 @@ btnSend.addEventListener("click", function(event){
     console.log(validMsg());
 
     Email.send({
-        SecureToken: "f4e9ca31-f805-4446-9619-1c678b4571cf",
+        SecureToken: "8a984eb9-44f5-4ca9-a036-314ed8874bd3",
         To : 'yetisgeneration@gmail.com',
-        From : mail,
-        Subject : "Mensaje de Yeti Personalizado",
-        Body : "Nombre: " + nameTxt + "<br>Correo: " + mail + "<br>Telefono: " + phone + "<br>Mensaje: "+ msg
+        From : mail.value,
+        Subject : "Mensaje de Yeti Personalizado MX",
+        Body : "Nombre: " + nameTxt.value + "<br>Correo: " + mail.value + "<br>Telefono: " + phone.value + "<br>Mensaje: "+ msg.value
     }).then(
-      message => alert(message)
+      message => alert(message) // mostrar mensaje enviado, pendiente
     );
-    Email.toString();
 });
 
