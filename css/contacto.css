@@ -1,0 +1,31 @@
+* {
+    font-family: "Rajdhani";
+}
+
+.contactPage {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: auto;
+}
+
+#banner {
+    grid-column: 1/13;
+    margin-bottom: 3rem;
+    margin-top: 1.5rem;
+    width: 100%;
+    height: auto
+}
+
+#fControl {
+    background-color: #E9E9E9;
+    border-radius: 10px;
+    grid-column: 1/6;
+    grid-row: 2;
+    padding: 1rem 2rem 0rem 2rem;
+    margin-bottom: 1rem;
+}
+
+#local {
+    grid-column: 7/12;
+    grid-row: 2;
+}
