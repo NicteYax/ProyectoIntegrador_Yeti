@@ -24,7 +24,7 @@ nav {
   }
 
   #pages {
-    grid-column: 1/4;
+    grid-column: 1/5;
     margin-left: 1rem;
     font-size: xx-large;
   }
