@@ -14,6 +14,7 @@ window.addEventListener("load", function (event) {
                     </a>
                     <a class="navbar-brand" href="./personaliza.html"><strong>PERSONALIZA</strong></a>
                     <a class="navbar-brand" href="./contacto.html"><strong>CONTACTO</strong></a>
+                    <a class="navbar-brand" href="./acercade.html "><strong>NOSOTROS</strong></a>
                 </div>
                 <div id="logo">
                     <a href="./index.html"><img id="logoImg" src="./src/yeti.png" alt="Logo yeti" height="99px" width="174.51px" /></a>
