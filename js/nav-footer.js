@@ -77,6 +77,7 @@ window.addEventListener("load", function (event) {
 
 
     body.insertAdjacentHTML("beforeend",`
+    <div class="fixed-bottom">
     <footer id="footerREAL">
         <div class="footer">
             <em>Copyright &#169; 2023 | YETI PERSONALIZADO MX</em>
@@ -86,9 +87,9 @@ window.addEventListener("load", function (event) {
                     alt="instagram" height="25px" width="25px" /></a>
             <a href="https://www.facebook.com/yeti.personalizado" target="_blank"><img src="./src/face.png"
                     alt="facebook" height="25px" width="25px" /></a>
-        </div>
+        </div> 
     </footer>
-    
+    </div>
     `);
 
 
