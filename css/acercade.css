@@ -284,9 +284,18 @@
     }
 
     .flip-card{
-        width: 15rem;
-        height: 14rem;
+        width: 14rem;
+        height: 13rem;
     }
+
+    .back > p{
+        font-size: smaller;
+    }
+
+    #ldkin{
+        width: 2rem;
+    }
+
     .sectionAboutUs {
         width: 19.1rem;
         height: 12rem;
