@@ -33,7 +33,7 @@ window.addEventListener("load", function (event) {
                         target="_blank"><img id="wap" src="./src/whatsapp.png" alt="whatsapp" height="40px"
                             width="40px" /></a>
                 </div>
-                <button id="btnNav" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
                     aria-controls="offcanvasDarkNavbar" id="btnRight">
                     <span class="navbar-toggler-icon"></span>
                 </button>
