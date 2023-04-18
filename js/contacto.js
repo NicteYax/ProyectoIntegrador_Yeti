@@ -1,4 +1,6 @@
 "use strict"
+
+// ACCESS TO DOM
 let nameTxt = document.getElementById("name");
 let phone = document.getElementById("phone");
 let mail = document.getElementById("mail");
@@ -11,7 +13,9 @@ let regexName = /^[A-Za-zéáíóúñÑÁÉÍÓÚ\s]+$/;
 let regexMail = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
 let isValid = true;
 
+//FUNCTIONS TO VALID INPUTS
 
+//VALID NAME
 function validName(){
     if (nameTxt.value.length < 3){
         return false;
@@ -22,6 +26,7 @@ function validName(){
     return true; 
 };
 
+//VALID PHONE NUMBER
 function validPhone(){
     if (phone.value.length!=10){
         return false;
@@ -32,6 +37,7 @@ function validPhone(){
     return true;
 };
 
+// VALID EMAIL
 function validMail(){
     if (mail.value.match(regexMail)){
         return true;
@@ -39,6 +45,7 @@ function validMail(){
     return false;
 };
 
+// VALID MENSSAGE
 function validMsg(){
     if (msg.value.length <= 20){
         return false;
@@ -46,6 +53,7 @@ function validMsg(){
     return true;
 };
 
+// BUTTON WITH ADD EVENT LISTENER
 btnSend.addEventListener("click", function (event) {
   event.preventDefault();
   alertVal.style.display = "none";
@@ -90,6 +98,7 @@ btnSend.addEventListener("click", function (event) {
     msg.style.border = "";
   }
 
+  // SET TIME OUT
   alertMsg += "</ul>";
   alertValText.insertAdjacentHTML("beforeend", alertMsg);
   idTimeout = setTimeout(function () {
@@ -100,6 +109,7 @@ btnSend.addEventListener("click", function (event) {
   console.log(validMail());
   console.log(validMsg());
 
+  // SEND EMAIL WITH API SMTPJS.COM
   Email.send({
     SecureToken: "8a984eb9-44f5-4ca9-a036-314ed8874bd3",
     To: "yetisgeneration@gmail.com",
@@ -124,6 +134,7 @@ btnSend.addEventListener("click", function (event) {
   nameTxt.focus();
 });
 
+//FUNCTION BLUR
 nameTxt.addEventListener("blur", function (event) {
   event.preventDefault();
   nameTxt.value = nameTxt.value.trim();

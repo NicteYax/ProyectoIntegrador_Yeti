@@ -1,7 +1,18 @@
 * {
     font-family: "Rajdhani";
 }
-/*Efecto de flip card*/
+
+/* CONTAINER STYLE */
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+/*FLIP CARD EFFECT*/
 .flip-card{
     background-color: transparent;
     width: 300px;
@@ -50,15 +61,9 @@
         padding: 0.5rem;
 }
 
-/*Tablero de tarjetas*/
-/* .container-fluid #integrants {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-evenly;
-    padding-left: 2rem;
-        padding-right: 2-rem;
-} */
+/* MEDIA-QUERIES */
+
+/* DESKTOP */
 @media (min-width: 800px) {
     .container-fluid> #integrants{
         display: grid;
@@ -66,15 +71,210 @@
         grid-template-columns: repeat(3, 1fr);
         width: fit-content;
     }
+    .sectionAboutUs {
+        height: 57rem;
+        width: 84.8rem;
+        font-size: 1.5em;
+    
+        background-image: url("/src/aboutUs/foto.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+        margin-bottom: 40px;
+        margin-bottom: 40px;
+        margin-left: -20px;
+        }
+        .center {
+            height: 57rem;
+            width: 84.8rem;
+        
+            background-image: url("/src/aboutUs/backgroundPic.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+            margin-left: -20px;
+        }
+        
+        
+        .msnAboutUs {
+            width: 68rem;
+            height: 30rem;
+            margin: 0px auto;
+        
+            background-color: aliceblue;
+            background: rgba(255, 255, 255, 0.7);
+        
+            border-radius: 50px;
+            align-items: center;
+            padding: 100px;
+            justify-content: center;
+        
+        }
+        
+        .frase {
+            font-family: "Rajdhani";
+            /*  Rajdhani */
+            color: #043454;
+            font-size: 2.5rem;
+            text-align: center;
+            padding-top: 4rem;
+        }
+        
+        .opacityTxt {
+            width: 66rem;
+            height: 11rem;
+            margin: 0px auto;
+        
+            border-color: #848483;
+            background-color: rgba(132, 132, 131, 0.5);
+            color: #1C243C;
+        
+            border-radius: 25px;
+        
+            font-family: "Rajdhani";
+            /*  Rajdhani */
+            font-size: 2.5rem;
+            text-align: center;
+        
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            justify-content: center;
+        }
+    
+        #contMision{
+            margin-bottom: 7rem;
+        }
+        
+        #mision {
+            font-size: 1.25rem;
+            text-align: justify;
+            padding-top: 5px;
+            text-align: justify;
+        
+        }
+        
+        #vision {
+            font-size: 1.25rem;
+            text-align: justify;
+            padding-top: 5px;
+            text-align: justify;
+        }
 }
-@media (max-width: 780px) {
+
+/* TABLET */
+@media (max-width: 785px) {
     .container-fluid> #integrants{
         display: grid;
         gap: 4rem;
         grid-template-columns: repeat(2, 1fr);
         width: fit-content;
     }
+    .sectionAboutUs {
+        width: 47.75rem;
+        height: 25rem;
+        font-size: 1em;
+    
+        background-image: url("/src/aboutUs/foto.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+        margin-top: 130px;
+        margin-bottom: 40px;
+        margin-left: -25px;
+        }
+        .center {
+            height: 23rem;
+            width: 47.75rem;
+        
+            background-image: url("/src/aboutUs/backgroundPic.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+            margin-left: -15px;
+        }
+        
+        
+        .msnAboutUs {
+            width: 41rem;
+            height: 18rem;
+        
+            background-color: aliceblue;
+            background: rgba(255, 255, 255, 0.7);
+        
+            border-radius: 50px;
+            align-items: center;
+            justify-content: center;
+            padding: 100px;
+        }
+        
+        .frase {
+            font-family: "Rajdhani";
+            /*  Rajdhani */
+            color: #043454;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        
+        .opacityTxt {
+            width: 40rem;
+            height: 7rem;
+            margin: 0px auto;
+        
+            border-color: #848483;
+            background-color: rgba(132, 132, 131, 0.5);
+            color: #1C243C;
+        
+            border-radius: 25px;
+        
+            font-family: "Rajdhani";
+            /*  Rajdhani */
+            font-size: 1.5rem;
+            text-align: center;
+        
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            justify-content: center;
+        }
+        
+        #mision {
+            font-size: .75rem;
+            text-align: justify;
+            padding-top: 5px;
+            text-align: justify;
+        
+        }
+        
+        #vision {
+            font-size: 0.75rem;
+            text-align: justify;
+            padding-top: 5px;
+            text-align: justify;
+        }
 }
+
+/* MOVIL PHONE */
 @media (max-width: 320px) {
     .container-fluid> #integrants{
         display: grid;
@@ -87,4 +287,98 @@
         width: 15rem;
         height: 14rem;
     }
+    .sectionAboutUs {
+        width: 19.1rem;
+        height: 12rem;
+        font-size: 1em;
+    
+        background-image: url("/src/aboutUs/foto.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+        margin-top: 100px;
+        margin-bottom: 20px;
+        margin-left: -15px;
+        }
+        .center {
+            height: 12rem;
+            width: 19.1rem;
+        
+            background-image: url("/src/aboutUs/backgroundPic.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            margin-left: -15px;
+        }
+        
+        
+        .msnAboutUs {
+            width: 17.5rem;
+            height: 9rem;
+        
+            background-color: aliceblue;
+            background: rgba(255, 255, 255, 0.7);
+        
+            border-radius: 50px;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+        
+        .frase {
+            font-family: "Rajdhani";
+            /*  Rajdhani */
+            color: #043454;
+            font-size: .8rem;
+            text-align: center;
+        }
+        
+        .opacityTxt {
+            width: 17.5rem;
+            height: 4rem;
+            margin: 0px auto;
+        
+            border-color: #848483;
+            background-color: rgba(132, 132, 131, 0.5);
+            color: #1C243C;
+        
+            border-radius: 25px;
+        
+            font-family: "Rajdhani";
+            /*  Rajdhani */
+            font-weight: bold;
+            font-size: .7rem;
+            text-align: center;
+        
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        #mision {
+            font-size: .4rem;
+            font-weight: bold;
+            text-align: justify;
+            padding-top: 1px;
+            text-align: justify;
+        
+        }
+        
+        #vision {
+            font-size: 0.4rem;
+            font-weight: bold;
+            text-align: justify;
+            padding-top: 1px;
+            text-align: justify;
+        }
 }

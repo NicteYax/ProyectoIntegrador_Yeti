@@ -1,8 +1,13 @@
+// ACCESS TO DOM
+// DECLARE VARIABLES
 let main = document.getElementById("main")
 let body = document.getElementById("body")
 
+
+// INSERT NAV AND FOOTER AFTER LOAD WINDOW
 window.addEventListener("load", function (event) {
 
+    // NAV BAR
     main.insertAdjacentHTML("beforebegin", `
 
     <nav class="navbar navbar-dark fixed-top">
@@ -76,7 +81,7 @@ window.addEventListener("load", function (event) {
         </nav>
     `);
 
-
+    // FOOTER
     body.insertAdjacentHTML("beforeend",`
     <div class="fixed-bottom">
     <footer id="footerREAL">
@@ -93,6 +98,4 @@ window.addEventListener("load", function (event) {
     </div>
     `);
 
-
-
-});
+}); //WINDOW-LOAD
