@@ -12,60 +12,59 @@ let idTimeout;
 let regexName = /^[A-Za-zéáíóúñÑÁÉÍÓÚ\s]+$/;
 let regexMail = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
 let isValid = true;
-let sended = false;
 
 //FUNCTIONS TO VALID INPUTS
 
 //VALID NAME
-function validName() {
-  if (nameTxt.value.length < 3) {
-    return false;
-  }
-  if (!nameTxt.value.match(regexName)) {
-    return false;
-  }
-  return true;
+function validName(){
+    if (nameTxt.value.length < 3){
+        return false;
+    }
+    if (!nameTxt.value.match(regexName)){
+        return false;   
+    }
+    return true; 
 };
 
 //VALID PHONE NUMBER
-function validPhone() {
-  if (phone.value.length != 10) {
-    return false;
-  }
-  if (isNaN(phone.value)) {
-    return false;
-  }
-  return true;
+function validPhone(){
+    if (phone.value.length!=10){
+        return false;
+    }
+    if (isNaN(phone.value)){
+        return false;   
+    }
+    return true;
 };
 
 // VALID EMAIL
-function validMail() {
-  if (mail.value.match(regexMail)) {
-    return true;
-  }
-  return false;
+function validMail(){
+    if (mail.value.match(regexMail)){
+        return true;
+    }  
+    return false;
 };
 
 // VALID MENSSAGE
-function validMsg() {
-  if (msg.value.length <= 20) {
-    return false;
-  }
-  return true;
+function validMsg(){
+    if (msg.value.length <= 20){
+        return false;
+    }
+    return true;
 };
 
 // BUTTON WITH ADD EVENT LISTENER
+
 btnSend.addEventListener("click", function (event) {
   event.preventDefault();
-
   alertVal.style.display = "none";
   alertValText.innerHTML = "";
   isValid = true;
-  sended = false;
   clearTimeout(idTimeout);
 
-  let alertMsg = "Los siguientes campos deben ser llenados correctamente: <ul>";
+  // ERROR MESSAGES
 
+  let alertMsg = "Los siguientes campos deben ser llenados correctamente: <ul>";
   if (!validName()) {
     nameTxt.style.border = "solid thin red";
     alertMsg += "<li> Se debe escribir un nombre válido.</li>";
@@ -102,75 +101,45 @@ btnSend.addEventListener("click", function (event) {
     msg.style.border = "solid thin blue";
   }
 
+// IF IS VALID = TRUE, SEND EMAIL WITH API "EMAILJS"
 
+  if(isValid){
+    let templateParams = {
+    Subject: "Mensaje de Yeti Personalizado MX",
+    Name: nameTxt.value,
+    Mail: "Correo: " + mail.value,
+    Phone:  "Telefono: " + phone.value,
+    Message:  "Mensaje: " + msg.value
+  };
+  
+  emailjs.send('service_g1ocj89', 'template_1vpe1so', templateParams)
+  .then(function(response) {
+    console.log('SUCCESS!', response.status, response.text);
+    alert("Mensaje enviado");
+    nameTxt.value = "";
+    phone.value = "";
+    mail.value = "";
+    msg.value = "";
+    nameTxt.focus();
 
+ }, function(error) {
+    console.log('FAILED...', error);
+    alertMsg = "<li>Error al enviar email.</li>";
+    alertVal.style.display = "block";
+ });
+}
 
-  console.log(validName());
-  console.log(validPhone());
-  console.log(validMail());
-  console.log(validMsg());
+// SET TIME OUT
 
-  // FINAL VALIDATION (X4)
-  if (isValid) {
-    
-    // SEND EMAIL WITH API SMTPJS.COM
-    Email.send({
-      SecureToken: "8a984eb9-44f5-4ca9-a036-314ed8874bd3",
-      To: "yetisgeneration@gmail.com",
-      From: mail.value,
-      Subject: "Mensaje de Yeti Personalizado MX",
-      Body:
-        "Nombre: " +
-        nameTxt.value +
-        "<br>Correo: " +
-        mail.value +
-        "<br>Telefono: " +
-        phone.value +
-        "<br>Mensaje: " +
-        msg.value,
-    }).then(
-      (message) => {
-        ///////////////////////////verificar enviado cambiar estado de variable sended cuando se envie.
-        //alert(message);
-
-      }// Enviar
-
-    )
-      .catch((error) => {
-        alertMsg += "<li> " + error + ".</li>";
-        alertVal.style.display = "block";
-
-      }// Error - Enviar
-      );
-
-
-    //SENDED VALIDATION
-    if (sended) {
-      nameTxt.value = "";
-      phone.value = "";
-      mail.value = "";
-      msg.value = "";
-      ///////////////////// // mostrar mensaje enviado, pendiente
-
-    }
-    else {
-      alertMsg = "<li> Error al enviar email.</li>";
-      alertVal.style.display = "block";
-    }
-
-  }
-
-
-  //SET ERRORS MESSAGES
-  alertMsg += "</ul>";
-  alertValText.insertAdjacentHTML("beforeend", alertMsg);
-
-  //SET TIMEOUT
-  idTimeout = setTimeout(function () {
-    alertVal.style.display = "none";
-  }, 5000);
-
-
+alertMsg += "</ul>";
+alertValText.insertAdjacentHTML("beforeend", alertMsg);
+idTimeout = setTimeout(function () {
+  alertVal.style.display = "none";
+}, 5000);
+console.log(validName());
+console.log(validPhone());
+console.log(validMail());
+console.log(validMsg());
 
 });
 
@@ -194,6 +163,7 @@ msg.addEventListener("blur", function (event) {
   msg.value = msg.value.trim();
 });
 
+// FOCUS IN NAME
 
 window.addEventListener("load", function (event) {
   nameTxt.focus();

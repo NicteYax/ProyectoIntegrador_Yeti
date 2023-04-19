@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css?family=Rajdhani"
     />
     <title>Contacto</title>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
   </head>
 
   <body id="body">
@@ -113,12 +113,20 @@
     <!--SCRIPTS-->
     <script src="./js/contacto.js" defer></script>
     <script src="./js/nav-footer.js" defer></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<!--Email-->
+<script type="text/javascript">
+   (function(){
+      emailjs.init("ml7wSzcUWJaTSB_MQ");
+   })();
+</script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
       crossorigin="anonymous"
     ></script>
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
       integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
