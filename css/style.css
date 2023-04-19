@@ -7,6 +7,11 @@ nav {
   background-color: rgb(29, 38, 64, 1);
 }
 
+main{
+ margin-top: 8.5rem;
+ margin-bottom: 6rem; 
+}
+
 /* MEDIA-QUERIES */
 
 /* DESKTOP */
@@ -30,8 +35,8 @@ nav {
 
   #pages {
     grid-column: 1/5;
-    margin-left: 1rem;
-    font-size: xx-large;
+    margin-left: 0.3rem;
+    font-size: 0.01rem;
   }
 
   #logo {
@@ -186,4 +191,25 @@ nav {
   justify-content: space-evenly;
   align-items: center;
   clear: both;
+}
+
+/* CSS CARDS CATÁLOGO */
+.catalog{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+.cardProduct{
+  margin: 5px;
+  display: flex;
+  align-items: center;
+}
+.card > img{
+  max-height: 10rem;
+  width: auto;
+}
+
+.descriptionCard{
+  text-align: justify;
 }
