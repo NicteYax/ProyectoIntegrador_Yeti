@@ -35,8 +35,8 @@ main{
 
   #pages {
     grid-column: 1/5;
-    margin-left: 1rem;
-    font-size: xx-large;
+    margin-left: 0.3rem;
+    font-size: 0.01rem;
   }
 
   #logo {
@@ -192,6 +192,8 @@ main{
   align-items: center;
   clear: both;
 }
+
+/* CSS CARDS CATÁLOGO */
 .catalog{
   display:flex;
   flex-direction: row;
@@ -204,6 +206,10 @@ main{
   align-items: center;
 }
 .card > img{
-  max-width: 90%;
-  height: auto;
+  max-height: 10rem;
+  width: auto;
+}
+
+.descriptionCard{
+  text-align: justify;
 }

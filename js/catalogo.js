@@ -156,7 +156,8 @@ let producto = [
                 <img src="${datos[i].image}" class="card-img-top" alt="...">
                 <div class="card-body">
                 <h5 class="card-title">${datos[i].title}</h5>
-                <p class="card-text">${datos[i].description}</p>
+                <p class="card-text descriptionCard">${datos[i].description.slice(0, 60
+                )}...</p>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal_${datos[i].id}">Más info </button>
                 </div>
               </div>
@@ -168,12 +169,13 @@ let producto = [
                  <h1 class="modal-title fs-5" id="exampleModalLabel">${datos[i].title}</h1>
                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                  </div>
+                 <center><img src="${datos[i].image}" class="card-img-top" alt="..." style="width: 15rem"></center>
                  <div class="modal-body">
                  ${datos[i].description}
                  <p class="text-end"><strong> $ ${datos[i].price} MXN </strong></p>
                   </div>
                   <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Añadir a carrito</button>
                   </div>
                   </div>
                   </div>
