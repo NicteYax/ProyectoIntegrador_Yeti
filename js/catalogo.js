@@ -1,27 +1,27 @@
 let producto = [
     {
       id: 1,
-      title: "Apilable",
+      title: "Apilable 26 oz",
       price: 0,
-      description:"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+      description:"Una taza grande para grandes tragos: perfecta para tés, agua fría o batidos XL. Cabe en la mayoría de los portavasos.",
       category: "Termos",
       image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
     },
     {
         id: 2,
-        title: "Hotshot",
+        title: "Hotshot 12 oz",
         price: 0,
         description:
-          "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+          "Nuestra botella clásica combinada con la tapa 360º HotShot™, es a prueba de fugas. Lleva tu café mientras viajas. Cabe en la mayoría de los portavasos.",
         category: "Termos",
         image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
       },
       {
         id: 3,
-        title: "Lowball",
+        title: "Lowball 10 oz",
         price: 0,
         description:
-          "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+          "Vaso pequeño, apilable, clásico y versátil para tu cóctel en el campamento.",
         category: "Termos",
         image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
       },
@@ -30,7 +30,7 @@ let producto = [
         title: "Mug 10 oz",
         price: 0,
         description:
-          "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+          "Taza apilable para almacenamiento. Es compacta y aislada, ideal para bebidas calientes.",
         category: "Termos",
         image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
       },
@@ -39,7 +39,7 @@ let producto = [
         title: "Mug 14 oz",
         price: 0,
         description:
-          "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+          "Una taza versátil que es lo suficientemente grande como para servir como tazón de campamento.",
         category: "Termos",
         image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
       },
@@ -48,7 +48,7 @@ let producto = [
         title: "Mug 24 oz",
         price: 0,
         description:
-          "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+          "Una taza para beer gardens, cervezas en casa y bebidas abundantes.",
         category: "Termos",
         image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
       },
@@ -57,34 +57,34 @@ let producto = [
         title: "Pint 16 oz",
         price: 0,
         description:
-          "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+          "Un vaso de fiesta reutilizable, diseñado para cocteles, cervezas o smoothies. Cabe en la mayoría de los portavasos.",
         category: "Termos",
         image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
       },
       {
         id: 8,
-        title: "Portalata",
+        title: "Portalata 12 oz",
         price: 0,
         description:
-          "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+          "Mantén las cervezas y los refrescos fríos en los días más calurosos. Cabe en la mayoría de los portavasos.",
         category: "Termos",
         image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
       },
       {
         id: 9,
-        title: "Portalata Slim",
+        title: "Portalata Slim 12 oz",
         price: 0,
         description:
-          "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+          "Los Hard seltzers se mantienen fríos en la playa o en el barco. Cabe en la mayoría de los portavasos.",
         category: "Termos",
         image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
       },
       {
         id: 10,
-        title: "Portalata Tall",
+        title: "Portalata Tall 16 oz",
         price: 0,
         description:
-          "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+          "Las cervezas artesanales se mantienen frías hasta el último sorbo en cervecerías, playas y carnes asadas en el patio trasero. Cabe en la mayoría de los portavasos.",
         category: "Termos",
         image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
       },
@@ -93,7 +93,7 @@ let producto = [
         title: "Termo 18 oz",
         price: 0,
         description:
-          "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+          "Hidratación en mano para caminatas matutinas, paseos en kayak y viajes diarios. Cabe en la mayoría de los portavasos.",
         category: "Termos",
         image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
       },
@@ -102,7 +102,7 @@ let producto = [
         title: "Termo 26 oz",
         price: 0,
         description:
-          "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+          "Una botella a prueba de fugas que se adapta a la cantidad justa de hidratación, con una tapa para beber fácilmente.",
         category: "Termos",
         image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
       },
@@ -111,7 +111,7 @@ let producto = [
         title: "Termo 36 oz",
         price: 0,
         description:
-          "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+          "La botella aislada más grande, te ayuda a mantenerte hidratado en tu día libre.",
         category: "Termos",
         image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
       },
@@ -120,7 +120,7 @@ let producto = [
         title: "Termo 46 oz",
         price: 0,
         description:
-          "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+          "Una botella de gran tamaño diseñada para seguirte hasta el fin del mundo y mantenerte hidratado en el camino.",
         category: "Termos",
         image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
       },
@@ -129,7 +129,7 @@ let producto = [
         title: "Termo 64 oz",
         price: 0,
         description:
-          "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+          "Una botella más grande para los días en el rancho o en el bote.",
         category: "Termos",
         image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
       },
@@ -138,7 +138,7 @@ let producto = [
         title: "Termo Galón",
         price: 0,
         description:
-          "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+          "Casi 24 horas de agua para seguirte desde el gimnasio hasta el rancho y de vuelta a casa.",
         category: "Termos",
         image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
       }];
