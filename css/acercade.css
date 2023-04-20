@@ -275,7 +275,7 @@
 }
 
 /* MOVIL PHONE */
-@media (max-width: 320px) {
+@media (max-width: 420px) {
     .container-fluid> #integrants{
         display: grid;
         gap: 2rem;
