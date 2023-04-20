@@ -135,11 +135,7 @@ alertMsg += "</ul>";
 alertValText.insertAdjacentHTML("beforeend", alertMsg);
 idTimeout = setTimeout(function () {
   alertVal.style.display = "none";
-}, 5000);
-console.log(validName());
-console.log(validPhone());
-console.log(validMail());
-console.log(validMsg());
+}, 3500);
 
 });
 

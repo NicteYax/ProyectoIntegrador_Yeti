@@ -13,8 +13,9 @@ let idTimeout;
 let regexName = /^[A-Za-zéáíóúñÑÁÉÍÓÚ\s]+$/;
 let regexMail = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
 let regexPrice = /\d{1,3}(?:[.,]\d{3})*(?:[.,]\d{2})/;
-
 let isValid = true;
+let id = 17;
+let datos = [];
 
 //FUNCTIONS TO VALID INPUTS
 
@@ -68,115 +69,112 @@ btnSend.addEventListener("click", function (event) {
   alertValText.innerHTML = "";
   isValid = true;
   clearTimeout(idTimeout);
-  
-  console.log(validName());
-  console.log(validPrecio());
-  console.log(validCategoria());
-  console.log(validDescripcion());
 
-//   // ERROR MESSAGES
+  // ERROR MESSAGES
 
-//   let alertMsg = "Los siguientes campos deben ser llenados correctamente: <ul>";
-//   if (!validName()) {
-//     nameTxt.style.border = "solid thin red";
-//     alertMsg += "<li> Se debe escribir un nombre válido.</li>";
-//     alertVal.style.display = "block";
-//     isValid = false;
-//   } else {
-//     nameTxt.style.border = "solid thin blue";
-//   }
+  let alertMsg = "Los siguientes campos deben ser llenados correctamente: <ul>";
+  if (!validName()) {
+    nameTxt.style.border = "solid thin red";
+    alertMsg += "<li> Se debe escribir un nombre válido.</li>";
+    alertVal.style.display = "block";
+    isValid = false;
+  } else {
+    nameTxt.style.border = "solid thin blue";
+  }
 
-//   if (!validPhone()) {
-//     phone.style.border = "solid thin red";
-//     alertMsg += "<li> Se debe escribir un número de teléfono válido.</li>";
-//     alertVal.style.display = "block";
-//     isValid = false;
-//   } else {
-//     phone.style.border = "solid thin blue";
-//   }
+  if (!validPrecio()) {
+    precio.style.border = "solid thin red";
+    alertMsg += "<li> Se debe escribir un precio válido.</li>";
+    alertVal.style.display = "block";
+    isValid = false;
+  } else {
+    precio.style.border = "solid thin blue";
+  }
 
-//   if (!validMail()) {
-//     mail.style.border = "solid thin red";
-//     alertMsg += "<li> Se debe escribir un e-mail válido.</li>";
-//     alertVal.style.display = "block";
-//     isValid = false;
-//   } else {
-//     mail.style.border = "solid thin blue";
-//   }
+  if (!validCategoria()) {
+    categoria.style.border = "solid thin red";
+    alertMsg += "<li> Se debe escribir una categoría válida.</li>";
+    alertVal.style.display = "block";
+    isValid = false;
+  } else {
+    categoria.style.border = "solid thin blue";
+  }
 
-//   if (!validMsg()) {
-//     msg.style.border = "solid thin red";
-//     alertMsg += "<li> Se debe escribir un mensaje válido.</li>";
-//     alertVal.style.display = "block";
-//     isValid = false;
-//   } else {
-//     msg.style.border = "solid thin blue";
-//   }
+  if (!validDescripcion()) {
+    descripcion.style.border = "solid thin red";
+    alertMsg += "<li> Se debe escribir una descripción válida.</li>";
+    alertVal.style.display = "block";
+    isValid = false;
+  } else {
+   descripcion.style.border = "solid thin blue";
+  }
 
-// // IF IS VALID = TRUE, SEND EMAIL WITH API "EMAILJS"
+  // JSON
 
-//   if(isValid){
-//     let templateParams = {
-//     Subject: "Mensaje de Yeti Personalizado MX",
-//     Name: nameTxt.value,
-//     Mail: "Correo: " + mail.value,
-//     Phone:  "Telefono: " + phone.value,
-//     Message:  "Mensaje: " + msg.value
-//   };
-  
-//   emailjs.send('service_g1ocj89', 'template_1vpe1so', templateParams)
-//   .then(function(response) {
-//     console.log('SUCCESS!', response.status, response.text);
-//     alert("Mensaje enviado");
-//     nameTxt.value = "";
-//     phone.value = "";
-//     mail.value = "";
-//     msg.value = "";
-//     nameTxt.focus();
+  if (isValid) {
+    let elemento = `{
+                "id": "${id++}",
+                "tittle": "${nameTxt.value}",
+                "price": "$${precio.value}",
+                "category": "${categoria.value}",
+                "description": "${descripcion.value}",
+                "image": "${foto.value}"
+    }`;
+    datos.push(JSON.parse(elemento));
 
-//  }, function(error) {
-//     console.log('FAILED...', error);
-//     alertMsg = "<li>Error al enviar email.</li>";
-//     alertVal.style.display = "block";
-//  });
-// }
+    nameTxt.value = "";
+    precio.value = "";
+    categoria.value = "";
+    descripcion.value = "";
+    foto.value = "";
 
-// // SET TIME OUT
+    alert("Producto agregado correctamente");
+    }
+    
+    localStorage.setItem("datos", JSON.stringify(datos));
 
-// alertMsg += "</ul>";
-// alertValText.insertAdjacentHTML("beforeend", alertMsg);
-// idTimeout = setTimeout(function () {
-//   alertVal.style.display = "none";
-// }, 5000);
-// console.log(validName());
-// console.log(validPhone());
-// console.log(validMail());
-// console.log(validMsg());
 
+// SET TIME OUT
+
+alertMsg += "</ul>";
+alertValText.insertAdjacentHTML("beforeend", alertMsg);
+idTimeout = setTimeout(function () {
+  alertVal.style.display = "none";
+  nameTxt.style.border = "";
+  precio.style.border = "";
+  categoria.style.border = "";
+  descripcion.style.border = "";
+}, 3500);
  });
 
-// //FUNCTION BLUR
-// nameTxt.addEventListener("blur", function (event) {
-//   event.preventDefault();
-//   nameTxt.value = nameTxt.value.trim();
-// });
-// phone.addEventListener("blur", function (event) {
-//   event.preventDefault();
-//   phone.value = phone.value.trim();
-// });
 
-// mail.addEventListener("blur", function (event) {
-//   event.preventDefault();
-//   mail.value = mail.value.trim();
-// });
 
-// msg.addEventListener("blur", function (event) {
-//   event.preventDefault();
-//   msg.value = msg.value.trim();
-// });
+//FUNCTION BLUR
+nameTxt.addEventListener("blur", function (event) {
+  event.preventDefault();
+  nameTxt.value = nameTxt.value.trim();
+});
+precio.addEventListener("blur", function (event) {
+  event.preventDefault();
+  precio.value = precio.value.trim();
+});
 
-// // FOCUS IN NAME
+categoria.addEventListener("blur", function (event) {
+  event.preventDefault();
+  categoria.value = categoria.value.trim();
+});
 
-// window.addEventListener("load", function (event) {
-//   nameTxt.focus();
-// });
+descripcion.addEventListener("blur", function (event) {
+  event.preventDefault();
+  descripcion.value = descripcion.value.trim();
+});
+
+// FOCUS IN NAME
+
+window.addEventListener("load", function (event) {
+  nameTxt.focus();
+  if (localStorage.getItem("datos") != null) {
+    datos = JSON.parse(localStorage.getItem("datos"));
+ }
+});
+
