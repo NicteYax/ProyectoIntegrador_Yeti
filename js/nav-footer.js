@@ -12,6 +12,9 @@ window.addEventListener("load", function (event) {
 
     <nav class="navbar navbar-dark fixed-top">
             <div class="barraContenedor">
+            <div id="logo">
+                    <a href="./index.html"><img id="logoImg" src="./src/yeti.png" alt="Logo yeti" height="99px" width="174.51px" /></a>
+                </div>
                 <div id="pages">
                     <a class="navbar-brand" href="./index.html"><strong>INICIO</strong>
                     </a>
@@ -21,9 +24,7 @@ window.addEventListener("load", function (event) {
                     <a class="navbar-brand" href="./contacto.html"><strong>CONTACTO</strong></a>
                     <a class="navbar-brand" href="./acercade.html "><strong>NOSOTROS</strong></a>
                 </div>
-                <div id="logo">
-                    <a href="./index.html"><img id="logoImg" src="./src/yeti.png" alt="Logo yeti" height="99px" width="174.51px" /></a>
-                </div>
+                
                 <div id="redSocials">
                     <a href="./carrito.html"><img id="car" src="./src/carrito.png" alt="carrito" height="40px"
                             width="40px" /></a>
