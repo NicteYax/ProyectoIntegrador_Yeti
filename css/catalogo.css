@@ -1,15 +1,173 @@
+* {
+    font-family: "Rajdhani";
+}
 
-/* @media (min-width: 800px) {
+/*DESKTOP*/
+@media (min-width: 800px) {
+    .contenedor{
+    width: 100%;
+    height: 540px;
+    background-image: url("/src/catalogo/inicio.jpg");
+    background-size: cover;
+    margin-top: 7rem;
+
+    }
+    .menuCat{
+        padding-top: 1rem;
+        background-color: black;
+        opacity: 0.5;
+        position: absolute;
+        width: 100.3%;
+        height: 100px;
+        left: -4px;
+        top: 235px;
+    }
+    .loncheras{
+        color: white;
+        font-size: 2rem;
+    }
     
-
-} */
-
-/* @media(max-width:790px) {
+    .hieleras{
+        color: white;
+        font-size: 2rem;
+    }
     
-} */
+    .termos{
+        color: white;
+        font-size: 2rem;
+    }
+    
+    .tazones{
+        color: white;
+        font-size: 2rem;
+    }
+    
+    .accesorios{
+        color: white;
+        font-size: 2rem;
+    }
+}
 
-/* @media(max-width:320px) {
-   
-} */
+/*TABLET*/
+@media(max-width:768px) {
+    .contenedor{
+    width: 100%;
+    height: 450px;
+    background-image: url("/src/catalogo/inicioTablet.jpg");
+    background-size: cover;
+    margin-top: 7rem;
+
+    }
+    .menuCat{
+        padding-top: 1rem;
+        background-color: black;
+        opacity: 0.5;
+        position: absolute;
+        width: 100.3%;
+        height: 80px;
+        left: -4px;
+        top: 235px;
+    }
+    .loncheras{
+        color: white;
+        font-size: 1.5rem;
+    }
+    
+    .hieleras{
+        color: white;
+        font-size: 1.5rem;
+    }
+    
+    .termos{
+        color: white;
+        font-size: 1.5rem;
+    }
+    
+    .tazones{
+        color: white;
+        font-size: 1.5rem;
+    }
+    
+    .accesorios{
+        color: white;
+        font-size: 1.5rem;
+    }
+}
+/*MOBILE*/
+@media(max-width:425px) {
+   .contenedor{
+    width: 100%;
+    height: 450px;
+    background-image: url("/src/catalogo/inicioMobile.jpg");
+    background-size: cover;
+    margin-top: 7rem;
+
+    }
+
+    .menuCat{
+        background: transparent;
+        margin-top: -13rem;
+    }
+    
+    .termos{
+        color: white;
+        font-size: 2rem;
+        background-color: black;
+        opacity: 1;
+        position: absolute;
+        width: 425px;
+        height: 65px;
+        left: 0px;
+        top: 100px;
+    }
+    
+    .hieleras{
+        color: white;
+        font-size: 2rem;
+        background-color: black;
+        opacity: 1;
+        position: absolute;
+        width: 425px;
+        height: 65px;
+        left: -1px;
+        top: 180px;
+    }
+
+    .loncheras{
+        color: white;
+        font-size: 2rem;
+        background-color: black;
+        opacity: 1;
+        position: absolute;
+        width: 425px;
+        height: 65px;
+        left: 0px;
+        top: 260px;
+    }
+    
+    .tazones{
+        color: white;
+        font-size: 2rem;
+        background-color: black;
+        opacity: 1;
+        position: absolute;
+        width: 425px;
+        height: 65px;
+        left: 0px;
+        top: 340px;
+    }
+    
+    .accesorios{
+        color: white;
+        font-size: 2rem;
+        background-color: black;
+        opacity: 1;
+        position: absolute;
+        width: 425px;
+        height: 65px;
+        left: 0px;
+        top: 420px;
+    }
+} 
 
 
