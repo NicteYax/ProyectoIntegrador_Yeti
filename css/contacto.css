@@ -44,7 +44,7 @@
     
 }
 
-@media (max-width: 320px) {
+@media (max-width: 380px) {
     .contactPage {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
