@@ -15,6 +15,7 @@ let regexMail = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
 let regexPhone = /^[1-9]{1}[0-9]{9}$/;
 let regexPswd = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*.?&])[A-Za-z\d$@$!%*.?&]{8,15}$/;
 let isValid = true;
+let usuarioObjeto;
 
 //FUNCTIONS TO VALID INPUTS
 
@@ -123,6 +124,20 @@ btnSend.addEventListener("click", function (event) {
     // IF IS VALID = TRUE, SEND EMAIL WITH API "EMAILJS"
 
     if (isValid) {
+        //JSON
+        let usuario = `{
+            "nombre": "${nameTxt.value}",
+            "phone": ${phone.value},
+            "mail": "${mail.value}",
+            "pswd": "${pswd.value}"
+        }`;
+        
+        usuarioObjeto=JSON.parse(usuario);
+        
+        //localStorage.setItem("usuarioObjeto", JSON.stringify(usuarioObjeto));
+        localStorage.setItem("Hola");
+        console.log(usuario);
+
         nameTxt.value = "";
         phone.value = "";
         mail.value = "";
@@ -142,7 +157,7 @@ btnSend.addEventListener("click", function (event) {
     idTimeout = setTimeout(function () {
         alertVal.style.display = "none";
     }, 3500);
-
+    
 });
 
 //FUNCTION BLUR
@@ -175,3 +190,4 @@ pswdRepeat.addEventListener("blur", function (event) {
 window.addEventListener("load", function (event) {
     nameTxt.focus();
 });
+

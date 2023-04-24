@@ -115,7 +115,6 @@ btnSend.addEventListener("click", function (event) {
     datos = JSON.parse(localStorage.getItem("datos"));
     id = (datos[datos.length-1].id);
     id++;
-    console.log(id);
     let elemento = `{
                 "id": ${id},
                 "title": "${nameTxt.value}",
