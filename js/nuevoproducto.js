@@ -14,55 +14,54 @@ let regexName = /^[A-Za-zéáíóúñÑÁÉÍÓÚ\s]+$/;
 let regexMail = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
 let regexPrice = /\d{1,3}(?:[.,]\d{3})*(?:[.,]\d{2})/;
 let isValid = true;
-let id = 17;
+let id;
 let datos = [];
 
 //FUNCTIONS TO VALID INPUTS
 
 //VALID NAME
-function validName(){
-    if (nameTxt.value.length < 3){
-        return false;
-    }
-    if (!nameTxt.value.match(regexName)){
-        return false;   
-    }
-    return true; 
+function validName() {
+  if (nameTxt.value.length < 3) {
+    return false;
+  }
+  if (!nameTxt.value.match(regexName)) {
+    return false;
+  }
+  return true;
 };
 
 //VALID PRECIO
-function validPrecio(){
-    if (precio.value.match(regexPrice)){
-        return true;
-    } 
-    return false;
+function validPrecio() {
+  if (precio.value.match(regexPrice)) {
+    return true;
+  }
+  return false;
 
 };
 
 // VALID CATEGORIA
-function validCategoria(){
-    if (categoria.value.length < 3){
-        return false;
-    }
-    if (!categoria.value.match(regexName)){
-        return false;   
-    }
-    return true; 
+function validCategoria() {
+  if (categoria.value.length < 3) {
+    return false;
+  }
+  if (!categoria.value.match(regexName)) {
+    return false;
+  }
+  return true;
 };
 
 // VALID DESCRIPCION
-function validDescripcion(){
-    if (categoria.value.length < 4){
-        return false; 
-    }
-    return true; 
+function validDescripcion() {
+  if (categoria.value.length < 4) {
+    return false;
+  }
+  return true;
 };
 
 //IMG
 
 
 // BUTTON WITH ADD EVENT LISTENER
-
 btnSend.addEventListener("click", function (event) {
   event.preventDefault();
   alertVal.style.display = "none";
@@ -73,6 +72,7 @@ btnSend.addEventListener("click", function (event) {
   // ERROR MESSAGES
 
   let alertMsg = "Los siguientes campos deben ser llenados correctamente: <ul>";
+
   if (!validName()) {
     nameTxt.style.border = "solid thin red";
     alertMsg += "<li> Se debe escribir un nombre válido.</li>";
@@ -106,20 +106,25 @@ btnSend.addEventListener("click", function (event) {
     alertVal.style.display = "block";
     isValid = false;
   } else {
-   descripcion.style.border = "solid thin blue";
+    descripcion.style.border = "solid thin blue";
   }
 
-  // JSON
 
+  // JSON
   if (isValid) {
+    datos = JSON.parse(localStorage.getItem("datos"));
+    id = (datos[datos.length-1].id);
+    id++;
+    console.log(id);
     let elemento = `{
-                "id": "${id++}",
-                "tittle": "${nameTxt.value}",
-                "price": "$${precio.value}",
+                "id": ${id},
+                "title": "${nameTxt.value}",
+                "price": ${precio.value},
                 "category": "${categoria.value}",
                 "description": "${descripcion.value}",
                 "image": "${foto.value}"
     }`;
+
     datos.push(JSON.parse(elemento));
 
     nameTxt.value = "";
@@ -129,23 +134,21 @@ btnSend.addEventListener("click", function (event) {
     foto.value = "";
 
     alert("Producto agregado correctamente");
-    }
-    
     localStorage.setItem("datos", JSON.stringify(datos));
+  }
 
+  // SET TIME OUT
+  alertMsg += "</ul>";
+  alertValText.insertAdjacentHTML("beforeend", alertMsg);
+  idTimeout = setTimeout(function () {
+    alertVal.style.display = "none";
+    nameTxt.style.border = "";
+    precio.style.border = "";
+    categoria.style.border = "";
+    descripcion.style.border = "";
+  }, 3500);
 
-// SET TIME OUT
-
-alertMsg += "</ul>";
-alertValText.insertAdjacentHTML("beforeend", alertMsg);
-idTimeout = setTimeout(function () {
-  alertVal.style.display = "none";
-  nameTxt.style.border = "";
-  precio.style.border = "";
-  categoria.style.border = "";
-  descripcion.style.border = "";
-}, 3500);
- });
+});//btnSend.addEventListener
 
 
 
@@ -158,16 +161,15 @@ precio.addEventListener("blur", function (event) {
   event.preventDefault();
   precio.value = precio.value.trim();
 });
-
 categoria.addEventListener("blur", function (event) {
   event.preventDefault();
   categoria.value = categoria.value.trim();
 });
-
 descripcion.addEventListener("blur", function (event) {
   event.preventDefault();
   descripcion.value = descripcion.value.trim();
 });
+
 
 // FOCUS IN NAME
 
@@ -175,6 +177,11 @@ window.addEventListener("load", function (event) {
   nameTxt.focus();
   if (localStorage.getItem("datos") != null) {
     datos = JSON.parse(localStorage.getItem("datos"));
- }
+
+    
+  }
+  else {
+
+  }
 });
 
