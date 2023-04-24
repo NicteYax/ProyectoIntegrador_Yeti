@@ -10,6 +10,7 @@ let alertVal = document.getElementById("alertVal");
 let alertValText = document.getElementById("alertValText");
 let idTimeout;
 let regexName = /^[A-Za-zéáíóúñÑÁÉÍÓÚ\s]+$/;
+let regexPhone = /^[1-9]{1}[0-9]{9}$/;
 let regexMail = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
 let isValid = true;
 
@@ -28,13 +29,10 @@ function validName(){
 
 //VALID PHONE NUMBER
 function validPhone(){
-    if (phone.value.length!=10){
-        return false;
-    }
-    if (isNaN(phone.value)){
-        return false;   
-    }
+  if (phone.value.match(regexPhone)) {
     return true;
+  }  
+  return false;
 };
 
 // VALID EMAIL
@@ -113,17 +111,21 @@ btnSend.addEventListener("click", function (event) {
   };
   
   emailjs.send('service_g1ocj89', 'template_1vpe1so', templateParams)
-  .then(function(response) {
-    console.log('SUCCESS!', response.status, response.text);
-    alert("Mensaje enviado");
+    .then(function () {
     nameTxt.value = "";
     phone.value = "";
     mail.value = "";
     msg.value = "";
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Mensaje enviado',
+        showConfirmButton: false,
+        timer: 2500
+      })
     nameTxt.focus();
 
- }, function(error) {
-    console.log('FAILED...', error);
+    }, function () {
     alertMsg = "<li>Error al enviar email.</li>";
     alertVal.style.display = "block";
  });
@@ -135,11 +137,7 @@ alertMsg += "</ul>";
 alertValText.insertAdjacentHTML("beforeend", alertMsg);
 idTimeout = setTimeout(function () {
   alertVal.style.display = "none";
-}, 5000);
-console.log(validName());
-console.log(validPhone());
-console.log(validMail());
-console.log(validMsg());
+}, 3500);
 
 });
 

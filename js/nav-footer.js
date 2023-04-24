@@ -12,6 +12,9 @@ window.addEventListener("load", function (event) {
 
     <nav class="navbar navbar-dark fixed-top">
             <div class="barraContenedor">
+            <div id="logo">
+                    <a href="./index.html"><img id="logoImg" src="./src/yeti.png" alt="Logo yeti" height="99px" width="174.51px" /></a>
+                </div>
                 <div id="pages">
                     <a class="navbar-brand" href="./index.html"><strong>INICIO</strong>
                     </a>
@@ -21,13 +24,11 @@ window.addEventListener("load", function (event) {
                     <a class="navbar-brand" href="./contacto.html"><strong>CONTACTO</strong></a>
                     <a class="navbar-brand" href="./acercade.html "><strong>NOSOTROS</strong></a>
                 </div>
-                <div id="logo">
-                    <a href="./index.html"><img id="logoImg" src="./src/yeti.png" alt="Logo yeti" height="99px" width="174.51px" /></a>
-                </div>
+                
                 <div id="redSocials">
                     <a href="./carrito.html"><img id="car" src="./src/carrito.png" alt="carrito" height="40px"
                             width="40px" /></a>
-                    <a href="./login.html"><img id="log" src="./src/login.png" alt="login" height="40px"
+                    <a href="./registro.html"><img id="log" src="./src/login.png" alt="registro" height="40px"
                             width="40px" /></a>
                     <a href="https://api.whatsapp.com/send?phone=525534266537&text=Quiero%20informaci%C3%B3n%20sobre%20los%20Yetis,%20porfavor"
                         target="_blank"><img id="wap" src="./src/whatsapp.png" alt="whatsapp" height="40px"

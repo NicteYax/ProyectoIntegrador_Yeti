@@ -84,8 +84,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-    
-        margin-bottom: 40px;
         margin-bottom: 40px;
         margin-left: -20px;
         }
@@ -181,7 +179,7 @@
         width: fit-content;
     }
     .sectionAboutUs {
-        width: 47.75rem;
+        width: 49.29rem;
         height: 25rem;
         font-size: 1em;
     
@@ -193,14 +191,12 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-    
-        margin-top: 130px;
         margin-bottom: 40px;
         margin-left: -25px;
         }
         .center {
             height: 23rem;
-            width: 47.75rem;
+            width: 48.7rem;
         
             background-image: url("/src/aboutUs/backgroundPic.jpg");
             background-size: cover;
@@ -275,7 +271,7 @@
 }
 
 /* MOVIL PHONE */
-@media (max-width: 320px) {
+@media (max-width: 380px) {
     .container-fluid> #integrants{
         display: grid;
         gap: 2rem;
@@ -297,11 +293,11 @@
     }
 
     .sectionAboutUs {
-        width: 19.1rem;
-        height: 12rem;
+        width: 23.6rem;
+        height: 17rem;
         font-size: 1em;
     
-        background-image: url("/src/aboutUs/foto.jpg");
+        background-image: url("/src/aboutUs/foto2.jpg");
         background-size: cover;
         background-repeat: no-repeat;
     
@@ -309,16 +305,15 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-    
-        margin-top: 100px;
-        margin-bottom: 20px;
+        margin-top: -25px;
+        margin-bottom: 15px;
         margin-left: -15px;
         }
         .center {
-            height: 12rem;
-            width: 19.1rem;
+            width: 23.6rem;
+            height: 17rem;
         
-            background-image: url("/src/aboutUs/backgroundPic.jpg");
+            background-image: url("/src/aboutUs/backgroundPic2.jpg");
             background-size: cover;
             background-repeat: no-repeat;
         
@@ -332,13 +327,13 @@
         
         
         .msnAboutUs {
-            width: 17.5rem;
+            width: 18.5rem;
             height: 9rem;
         
             background-color: aliceblue;
             background: rgba(255, 255, 255, 0.7);
         
-            border-radius: 50px;
+            border-radius: 30px;
             align-items: center;
             justify-content: center;
             padding: 40px;
@@ -353,8 +348,8 @@
         }
         
         .opacityTxt {
-            width: 17.5rem;
-            height: 4rem;
+            width: 18.5rem;
+            height: 7rem;
             margin: 0px auto;
         
             border-color: #848483;
@@ -366,7 +361,7 @@
             font-family: "Rajdhani";
             /*  Rajdhani */
             font-weight: bold;
-            font-size: .7rem;
+            font-size: .9rem;
             text-align: center;
         
             display: flex;
@@ -375,7 +370,7 @@
         }
         
         #mision {
-            font-size: .4rem;
+            font-size: .65rem;
             font-weight: bold;
             text-align: justify;
             padding-top: 1px;
@@ -384,7 +379,7 @@
         }
         
         #vision {
-            font-size: 0.4rem;
+            font-size: .65rem;
             font-weight: bold;
             text-align: justify;
             padding-top: 1px;

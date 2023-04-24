@@ -1,0 +1,24 @@
+#main {
+    /* display: flex;
+    flex-wrap: wrap; */
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: auto;
+    
+}
+
+#newProduct {
+    grid-column: 4/10;
+    margin-bottom: 3.5rem;
+    margin-top: 0.5rem;
+    width: auto;
+    height: 90%;
+    text-align: justify;
+    background-color: #E9E9E9;
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 10px;
+}
+
+.info {
+    margin-top: 1rem;
+}
