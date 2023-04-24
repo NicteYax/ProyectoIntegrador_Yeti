@@ -1,8 +1,5 @@
 let producto = JSON.parse(localStorage.getItem("datos"));
 
-
-
-
       let catalogo =document.getElementById("main");
 
       window.addEventListener("load", function (event) {

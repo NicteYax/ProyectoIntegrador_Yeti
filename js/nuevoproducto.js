@@ -133,7 +133,13 @@ btnSend.addEventListener("click", function (event) {
     descripcion.value = "";
     foto.value = "";
 
-    alert("Producto agregado correctamente");
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Producto agregado',
+      showConfirmButton: false,
+      timer: 2500
+    })
     localStorage.setItem("datos", JSON.stringify(datos));
   }
 
