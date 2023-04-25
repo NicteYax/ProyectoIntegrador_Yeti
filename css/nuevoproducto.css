@@ -22,3 +22,21 @@
 .info {
     margin-top: 1rem;
 }
+
+#btnFake {
+    width: 10rem;
+    margin-top: 0.4rem;
+    margin-bottom: 2rem;
+    background-color: #E9E9E9;
+    border-color: rgb(29, 38, 64, 1);
+}
+
+#imageFile{
+    width: 10rem;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+}
+
+#btnSend {
+    width: 10rem;
+}

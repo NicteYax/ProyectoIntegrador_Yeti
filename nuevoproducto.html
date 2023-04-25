@@ -47,15 +47,25 @@
             <input type="text" class="form-control" id="descripcion" />
           </div>
           <!-- URL IMG -->
-          <div class="info" id="for-categoria">
-            <label for="exampleFormControlInput1" class="form-label">Dirección de fotografía:</label>
-            <input type="text" class="form-control" id="foto" />
+          <div >
+              <div class="info form-group">
+                <label for="fileImage">Selecciona una imagen:</label>
+                <input type="button" class="form-control btn-primary" value="SUBIR IMAGEN" id="btnFake"> 
+                <input type="file" class="form-control-file" id="fileImage" style="display:none">
+              </div>
           </div>
-          <br />
-          <!-- BUTTON -->
-          <button type="button" class="btn btn-primary" id="btnSend">
+          <div class="col-6">
+              <img id="imageFile" name="imageFile" src="" alt="Vista previa de la imagen" title="Vista previa de la imagen" />
+          </div><!--col-6-->
+        </div> <!--row-->
+        <div class="row">
+          <div class="col-10">
+            <p type="hidden" class="form-control" data-toggle="tooltip" data-placement="bottom" id="inputFile" name="inputFile" value="" placehodler="Imagen del curso" title="Imagen" style="display:none"></p>
+            <!-- BUTTON -->
+            <button type="button" class="btn" id="btnSend">
             AGREGAR PRODUCTO
-          </button>
+            </button>
+          </div>
         </form>
       </article>
   </main>

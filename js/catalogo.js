@@ -177,7 +177,7 @@ let producto = JSON.parse(localStorage.getItem("datos"));
                 <h5 class="card-title">${datos[i].title}</h5>
                 <p class="card-text descriptionCard">${datos[i].description.slice(0, 60
                 )}...</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal_${datos[i].id}">Más info </button>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal_${datos[i].id}">Más info </button>
                 </div>
               </div>
               <!-- Modal -->
@@ -194,7 +194,7 @@ let producto = JSON.parse(localStorage.getItem("datos"));
                  <p class="text-end"><strong> $ ${datos[i].price} MXN </strong></p>
                   </div>
                   <div class="modal-footer">
-                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Añadir a carrito</button>
+                  <button type="button" class="btn" data-bs-dismiss="modal">Añadir a carrito</button>
                   </div>
                   </div>
                   </div>

@@ -16,6 +16,9 @@ let regexPrice = /\d{1,3}(?:[.,]\d{3})*(?:[.,]\d{2})/;
 let isValid = true;
 let id;
 let datos = [];
+let fileImage = document.getElementById('fileImage');
+let btnFake = document.getElementById('btnFake');
+let imageFile = document.getElementById('imageFile');
 
 //FUNCTIONS TO VALID INPUTS
 
@@ -59,7 +62,30 @@ function validDescripcion() {
 };
 
 //IMG
+btnFake.addEventListener('click', function(){
+  fileImage.click();
+  });
+  fileImage.addEventListener('change', function(){
+      previewFile('imageFile', 'fileImage', 'inputFile' )
+      //previewFile(id imagen, input type file , textArea);
+  });
 
+  //previewFile(id imagen, input type file , textArea);
+  function previewFile(img, inputFile, input) {
+    
+    var preview = document.getElementById(img);
+    var file    = document.getElementById(inputFile).files[0];
+    var reader  = new FileReader();
+
+    reader.addEventListener("load", function () {
+      document.getElementById(input).value = reader.result;
+        preview.src = reader.result;
+      }, false);
+    
+      if (file) {
+        reader.readAsDataURL(file);
+      }// file
+  }// previewFile 
 
 // BUTTON WITH ADD EVENT LISTENER
 btnSend.addEventListener("click", function (event) {
@@ -121,7 +147,7 @@ btnSend.addEventListener("click", function (event) {
                 "price": ${precio.value},
                 "category": "${categoria.value}",
                 "description": "${descripcion.value}",
-                "image": "${foto.value}"
+                "image": "${inputFile.value}"
     }`;
 
     datos.push(JSON.parse(elemento));
@@ -130,7 +156,7 @@ btnSend.addEventListener("click", function (event) {
     precio.value = "";
     categoria.value = "";
     descripcion.value = "";
-    foto.value = "";
+    inputFile.value = "";
 
     Swal.fire({
       position: 'center',

@@ -13,9 +13,19 @@ main {
 
 }
 
-#btnSend { 
+.btn { 
   background-color:  rgb(29, 38, 64, 1);
-  border-color: transparent;
+  border-color: rgb(29, 38, 64, 1);
+  color: white;
+}
+
+.btn:hover{
+  border-color: rgb(29, 38, 64, 1);
+}
+
+/*CARDS TERMOS */
+.mainTermos {
+  margin-bottom: 4rem;
 }
 
 /* MEDIA-QUERIES */
