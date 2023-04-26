@@ -67,6 +67,7 @@ btnFake.addEventListener('click', function(){
   });
   fileImage.addEventListener('change', function(){
       previewFile('imageFile', 'fileImage', 'inputFile' )
+      imageFile.style.display = "block";
       //previewFile(id imagen, input type file , textArea);
   });
 
@@ -157,6 +158,7 @@ btnSend.addEventListener("click", function (event) {
     categoria.value = "";
     descripcion.value = "";
     inputFile.value = "";
+    imageFile.style.display = "none";
 
     Swal.fire({
       position: 'center',

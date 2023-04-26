@@ -6,7 +6,7 @@
 @media (min-width: 800px) {
     .contenedor{
     width: 100%;
-    height: 540px;
+    height: 580px;
     background-image: url("/src/catalogo/inicio.jpg");
     background-size: cover;
     margin-top: 7rem;

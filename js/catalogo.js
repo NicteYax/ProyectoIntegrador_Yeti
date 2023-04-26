@@ -162,7 +162,7 @@ let producto = JSON.parse(localStorage.getItem("datos"));
       
         }
       });
-      
+      producto = JSON.parse(localStorage.getItem("datos"));
       mostrarProducto(producto);
 
       function mostrarProducto(datos) {

@@ -22,6 +22,11 @@ main {
 .btn:hover{
   border-color: rgb(29, 38, 64, 1);
 }
+.addBtn{
+  margin-bottom: 2rem;
+  margin-left: .5rem;
+}
+
 
 /*CARDS TERMOS */
 .mainTermos {
@@ -130,7 +135,7 @@ main {
 }
 
 /* MOVIL PHONE */
-@media (max-width: 380px) {
+@media (max-width: 425px) {
   nav>.barraContenedor {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
