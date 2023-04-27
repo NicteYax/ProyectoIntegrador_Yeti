@@ -1,10 +1,10 @@
 #main {
     /* display: flex;
     flex-wrap: wrap; */
-    display:grid;
+    display: grid;
     grid-template-columns: repeat(12, 1fr);
     width: auto;
-    
+
 }
 
 #newProduct {
@@ -31,7 +31,7 @@
     border-color: rgb(29, 38, 64, 1);
 }
 
-#imageFile{
+#imageFile {
     width: 10rem;
     margin-top: -1rem;
     margin-bottom: 2rem;
@@ -39,4 +39,54 @@
 
 #btnSend {
     width: 10rem;
+}
+
+/*copia de nosotros */
+@media (max-width: 768px) {
+    #fRegistro {
+        background-color: #E9E9E9;
+        border-radius: 10px;
+        grid-column: 2/12;
+        grid-row: 2;
+        padding: 1rem 2rem 1rem 2rem;
+        margin-bottom: 5rem;
+        align-content: center;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info {
+        margin-top: 0.3rem;
+   
+    }
+}
+
+@media (max-width: 425px) {
+    .contenedor {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        width: auto;
+        align-content: center;
+        justify-items: center;
+    }
+
+
+    #fControl {
+        background-color: #E9E9E9;
+        border-radius: 10px;
+        grid-column: 1/13;
+        grid-row: 2;
+        padding: 1rem 2rem 1rem 2rem;
+        margin-top: -3rem;
+        margin-bottom: 2rem;
+        align-content: center;
+    }
+
+
+    .info {
+        width: 15rem;
+    }
+
 }

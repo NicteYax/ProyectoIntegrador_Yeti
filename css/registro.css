@@ -23,6 +23,26 @@
     margin-top: 1rem;
 }
 
+@media (max-width: 768px){
+    #fRegistro {
+        background-color: #E9E9E9;
+        border-radius: 10px;
+        grid-column: 2/12;
+        grid-row: 2;
+        padding: 1rem 2rem 1rem 2rem;
+        margin-bottom: 5rem;
+        align-content: center;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .info{
+        margin-top: 0.3rem;
+        width: 30rem;
+    }
+}
+
 
 @media (max-width: 425px){
 #fRegistro {
@@ -44,6 +64,27 @@
     width: 22rem;
 }
 }
+
+@media (max-width: 375px){
+    #fRegistro {
+        background-color: #E9E9E9;
+        border-radius: 10px;
+        grid-column: 1/13;
+        grid-row: 2;
+        padding: 1rem 2rem 1rem 2rem;
+        margin-bottom: 5rem;
+        align-content: center;
+        margin-top: -1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .info{
+        margin-top: 0.3rem;
+        width: 18rem;
+    }
+    }
 
 @media (max-width: 320px){
     #fRegistro {

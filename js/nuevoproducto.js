@@ -42,20 +42,20 @@ function validPrecio() {
 
 };
 
-// VALID CATEGORIA
-function validCategoria() {
-  if (categoria.value.length < 3) {
-    return false;
-  }
-  if (!categoria.value.match(regexName)) {
-    return false;
-  }
-  return true;
-};
+// // VALID CATEGORIA
+// function validCategoria() {
+//   if (categoria.value.length < 3) {
+//     return false;
+//   }
+//   if (!categoria.value.match(regexName)) {
+//     return false;
+//   }
+//   return true;
+// };
 
 // VALID DESCRIPCION
 function validDescripcion() {
-  if (categoria.value.length < 4) {
+  if (descripcion.value.length < 4) {
     return false;
   }
   return true;
@@ -118,14 +118,14 @@ btnSend.addEventListener("click", function (event) {
     precio.style.border = "solid thin blue";
   }
 
-  if (!validCategoria()) {
-    categoria.style.border = "solid thin red";
-    alertMsg += "<li> Se debe escribir una categoría válida.</li>";
-    alertVal.style.display = "block";
-    isValid = false;
-  } else {
-    categoria.style.border = "solid thin blue";
-  }
+  // if (!validCategoria()) {
+  //   categoria.style.border = "solid thin red";
+  //   alertMsg += "<li> Se debe escribir una categoría válida.</li>";
+  //   alertVal.style.display = "block";
+  //   isValid = false;
+  // } else {
+  //   categoria.style.border = "solid thin blue";
+  // }
 
   if (!validDescripcion()) {
     descripcion.style.border = "solid thin red";
@@ -179,7 +179,7 @@ btnSend.addEventListener("click", function (event) {
     precio.style.border = "";
     categoria.style.border = "";
     descripcion.style.border = "";
-  }, 3500);
+  }, 15000);
 
 });//btnSend.addEventListener
 

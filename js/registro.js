@@ -13,7 +13,7 @@ let idTimeout;
 let regexName = /^[A-Za-zéáíóúñÑÁÉÍÓÚ\s]+$/;
 let regexMail = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
 let regexPhone = /^[1-9]{1}[0-9]{9}$/;
-let regexPswd = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*.?&])[A-Za-z\d$@$!%*.?&]{8,15}$/;
+let regexPswd = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*.?&])[A-Za-z\d$@$!%*.?&]{8,100}$/;
 let isValid = true;
 let usuarioObjeto;
 
@@ -104,7 +104,7 @@ btnSend.addEventListener("click", function (event) {
 
     if (!validPswd()) {
         pswd.style.border = "solid thin red";
-        alertMsg += "<li> Debe incluir al menos 8 caractéres, máximo 15, 1 mayúscula, 1 minúscula, 1 número, 1 caracter especial: @$!%*.?& y no debe contener espacios.</li>";
+        alertMsg += "<li> Debe incluir al menos 8 caractéres, 1 mayúscula, 1 minúscula, 1 número, 1 caracter especial: @$!%*.?& y no debe contener espacios.</li>";
         alertVal.style.display = "block";
         isValid = false;
         pswd.value = "";
@@ -154,7 +154,7 @@ btnSend.addEventListener("click", function (event) {
     alertValText.insertAdjacentHTML("beforeend", alertMsg);
     idTimeout = setTimeout(function () {
         alertVal.style.display = "none";
-    }, 5000);
+    }, 15000);
     
 });
 

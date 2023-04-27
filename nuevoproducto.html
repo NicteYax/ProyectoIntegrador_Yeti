@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./css/nuevoproducto.css" />
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rajdhani" />
+  <link rel="shortcut icon" href="./src/corona.png">
   <title>Registra nuevo producto</title>
   <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
 </head>
@@ -18,56 +19,68 @@
 
   <!--CONTAINER-->
   <main class="container-fluid contenedor" id="main">
-    
 
-      <!--FORM CONTROL-->
-      <article id="newProduct">
-        <form class="contactForm">
-          <div class="alert alert-danger fade show" style="display: none" role="alert" id="alertVal">
-            <p id="alertValText"></p>
+
+    <!--FORM CONTROL-->
+    <article id="newProduct">
+      <form class="contactForm">
+        <div class="alert alert-danger fade show" style="display: none" role="alert" id="alertVal">
+          <p id="alertValText"></p>
+        </div>
+        <!-- NAME -->
+        <div class="info" id="formName">
+          <label for="exampleFormControlInput1" class="form-label">Nombre del Producto:</label>
+          <input type="text" class="form-control" id="name" />
+        </div>
+        <!-- PRECIO -->
+        <div class="info" id="form-precio">
+          <label for="exampleFormControlInput1" class="form-label">Precio:</label>
+          <input placeholder="Precio con 2 decimales" type="text" class="form-control" id="precio" />
+        </div>
+        <!-- CATEGORIA -->
+        <div class="info" id="form-categoria">
+          <label for="exampleFormControlInput1" class="form-label">Categoría:</label>
+          <select class="form-select" aria-label="Default select example" id="categoria">
+            <option selected>Selecciona la categoría</option>
+            <option value="Termos" id="termo">Termos</option>
+            <option value="Loncheras" id="lonchera">Loncheras</option>
+            <option value="Hieleras" id="hielera">Hieleras</option>
+            <option value="Tazones" id="tazon">Tazones</option>
+            <option value="Accesorios" id="accesorio">Accesorios</option>
+          </select>
+        </div>
+
+
+
+        <!-- DESCRIPCION -->
+        <div class="info" id="form-descripcion">
+          <label for="exampleFormControlTextarea1" class="form-label">Descripción:</label>
+          <textarea type="textarea" class="form-control" id="descripcion"></textarea>
+        </div>
+        <!-- URL IMG -->
+        <div>
+          <div class="info form-group">
+            <label for="fileImage">Selecciona una imagen:</label>
+            <input type="button" class="form-control btn-primary" value="IMAGEN" id="btnFake">
+            <input type="file" class="form-control-file" id="fileImage" style="display:none" accept="image/png, image/jpeg">
           </div>
-          <!-- NAME -->
-          <div class="info" id="formName">
-            <label for="exampleFormControlInput1" class="form-label">Nombre del Producto:</label>
-            <input type="text" class="form-control" id="name" />
-          </div>
-          <!-- PRECIO -->
-          <div class="info" id="form-precio">
-            <label for="exampleFormControlInput1" class="form-label">Precio:</label>
-            <input type="text" class="form-control" id="precio" />
-          </div>
-          <!-- CATEGORIA -->
-          <div class="info" id="for-categoria">
-            <label for="exampleFormControlInput1" class="form-label">Categoría:</label>
-            <input type="text" class="form-control" id="categoria" />
-          </div>
-          <!-- DESCRIPCION -->
-          <div class="info" id="form-descripcion">
-            <label for="exampleFormControlTextarea1" class="form-label">Descripción:</label>
-            <input type="text" class="form-control" id="descripcion" />
-          </div>
-          <!-- URL IMG -->
-          <div >
-              <div class="info form-group">
-                <label for="fileImage">Selecciona una imagen:</label>
-                <input type="button" class="form-control btn-primary" value="SUBIR IMAGEN" id="btnFake"> 
-                <input type="file" class="form-control-file" id="fileImage" style="display:none">
-              </div>
-          </div>
-          <div class="col-6">
-              <img id="imageFile" name="imageFile" src="" alt="Vista previa de la imagen" title="Vista previa de la imagen" style="display: none;" />
-          </div><!--col-6-->
+        </div>
+        <div class="col-6">
+          <img id="imageFile" name="imageFile" src="" alt="Vista previa de la imagen" title="Vista previa de la imagen"
+            style="display: none;" />
+        </div><!--col-6-->
         </div> <!--row-->
         <div class="row">
           <div class="col-10">
-            <p type="hidden" class="form-control" data-toggle="tooltip" data-placement="bottom" id="inputFile" name="inputFile" value="" placehodler="Imagen del curso" title="Imagen" style="display:none"></p>
+            <p type="hidden" class="form-control" data-toggle="tooltip" data-placement="bottom" id="inputFile"
+              name="inputFile" value="" placehodler="Imagen del curso" title="Imagen" style="display:none"></p>
             <!-- BUTTON -->
             <button type="button" class="btn" id="btnSend">
-            AGREGAR PRODUCTO
+              AGREGAR PRODUCTO
             </button>
           </div>
-        </form>
-      </article>
+      </form>
+    </article>
   </main>
   <br />
 
