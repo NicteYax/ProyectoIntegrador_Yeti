@@ -162,25 +162,52 @@ btnSend.addEventListener("click", function (event) {
 nameTxt.addEventListener("blur", function (event) {
     event.preventDefault();
     nameTxt.value = nameTxt.value.trim();
+    if(validName()) {
+        nameTxt.style.border = "solid thin blue";
+      }
+      else {
+        nameTxt.style.border = "solid thin red";
+      }//else
+
 });
 phone.addEventListener("blur", function (event) {
     event.preventDefault();
     phone.value = phone.value.trim();
+    if(validPhone()) {
+        phone.style.border = "solid thin blue";
+      }else {
+        phone.style.border = "solid thin red";
+      }//else
 });
 
 mail.addEventListener("blur", function (event) {
     event.preventDefault();
     mail.value = mail.value.trim();
+    if (validMail()) {
+        mail.style.border = "solid thin blue";
+      } else {
+        mail.style.border = "solid thin red";
+      }//else
 });
 
 pswd.addEventListener("blur", function (event) {
     event.preventDefault();
     pswd.value = pswd.value.trim();
+    if(validPswd()){
+        pswd.style.border = "solid thin blue";
+      } else {
+        pswd.style.border = "solid thin red";
+    }
 });
 
 pswdRepeat.addEventListener("blur", function (event) {
     event.preventDefault();
     pswdRepeat.value = pswdRepeat.value.trim();
+    if(validPswdRepeat()){
+        pswdRepeat.style.border = "solid thin blue";
+      } else {
+        pswdRepeat.style.border = "solid thin red";
+    }
 });
 
 // FOCUS IN NAME

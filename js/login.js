@@ -107,11 +107,21 @@ btnLogIn.addEventListener("click", function (event) {
 mail.addEventListener("blur", function (event) {
     event.preventDefault();
     mail.value = mail.value.trim();
+    if (validMail()) {
+        mail.style.border = "solid thin blue";
+      } else {
+        mail.style.border = "solid thin red";
+      }//else
 });
 
 pswd.addEventListener("blur", function (event) {
     event.preventDefault();
     pswd.value = pswd.value.trim();
+    if(validPswd()){
+        pswd.style.border = "solid thin blue";
+      } else {
+        pswd.style.border = "solid thin red";
+    }//else
 });
 
 // FOCUS IN NAME

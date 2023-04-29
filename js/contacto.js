@@ -145,16 +145,18 @@ idTimeout = setTimeout(function () {
 nameTxt.addEventListener("blur", function (event) {
   event.preventDefault();
   nameTxt.value = nameTxt.value.trim();
-  if(validName) {
+  if(validName()) {
     nameTxt.style.border = "solid thin blue";
-  }else {
+  }
+  else {
     nameTxt.style.border = "solid thin red";
   }//else
 });
+
 phone.addEventListener("blur", function (event) {
   event.preventDefault();
   phone.value = phone.value.trim();
-  if(validPhone) {
+  if(validPhone()) {
     phone.style.border = "solid thin blue";
   }else {
     phone.style.border = "solid thin red";
@@ -165,7 +167,7 @@ phone.addEventListener("blur", function (event) {
 mail.addEventListener("blur", function (event) {
   event.preventDefault();
   mail.value = mail.value.trim();
-  if (validMail) {
+  if (validMail()) {
     mail.style.border = "solid thin blue";
   } else {
     mail.style.border = "solid thin red";
@@ -175,7 +177,7 @@ mail.addEventListener("blur", function (event) {
 msg.addEventListener("blur", function (event) {
   event.preventDefault();
   msg.value = msg.value.trim();
-  if(validMsg) {
+  if(validMsg()) {
     msg.style.border = "solid thin blue";
   } else {
     msg.style.border = "solid thin red";

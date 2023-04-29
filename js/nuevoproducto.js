@@ -42,16 +42,13 @@ function validPrecio() {
 
 };
 
-// // VALID CATEGORIA
-// function validCategoria() {
-//   if (categoria.value.length < 3) {
-//     return false;
-//   }
-//   if (!categoria.value.match(regexName)) {
-//     return false;
-//   }
-//   return true;
-// };
+// VALID CATEGORIA
+function validCategoria() {
+  if (categoria.value =="Selecciona la categoría") {
+    return false;
+  }
+  return true;
+};
 
 // VALID DESCRIPCION
 function validDescripcion() {
@@ -118,14 +115,14 @@ btnSend.addEventListener("click", function (event) {
     precio.style.border = "solid thin blue";
   }
 
-  // if (!validCategoria()) {
-  //   categoria.style.border = "solid thin red";
-  //   alertMsg += "<li> Se debe escribir una categoría válida.</li>";
-  //   alertVal.style.display = "block";
-  //   isValid = false;
-  // } else {
-  //   categoria.style.border = "solid thin blue";
-  // }
+  if (!validCategoria()) {
+    categoria.style.border = "solid thin red";
+    alertMsg += "<li> Se debe escribir una categoría válida.</li>";
+    alertVal.style.display = "block";
+    isValid = false;
+  } else {
+    categoria.style.border = "solid thin blue";
+  }
 
   if (!validDescripcion()) {
     descripcion.style.border = "solid thin red";
@@ -189,18 +186,43 @@ btnSend.addEventListener("click", function (event) {
 nameTxt.addEventListener("blur", function (event) {
   event.preventDefault();
   nameTxt.value = nameTxt.value.trim();
+  if(validName()) {
+    nameTxt.style.border = "solid thin blue";
+  }
+  else {
+    nameTxt.style.border = "solid thin red";
+  }//else
 });
 precio.addEventListener("blur", function (event) {
   event.preventDefault();
   precio.value = precio.value.trim();
+  if(validPrecio()) {
+    precio.style.border = "solid thin blue";
+  }
+  else {
+    precio.style.border = "solid thin red";
+  }
 });
 categoria.addEventListener("blur", function (event) {
   event.preventDefault();
   categoria.value = categoria.value.trim();
+  if(validCategoria()) {
+    categoria.style.border = "solid thin blue";
+  }
+  else {
+    categoria.style.border = "solid thin red";
+  }
+  
 });
 descripcion.addEventListener("blur", function (event) {
   event.preventDefault();
   descripcion.value = descripcion.value.trim();
+  if(validDescripcion()) {
+    descripcion.style.border = "solid thin blue";
+  }
+  else {
+    descripcion.style.border = "solid thin red";
+  }
 });
 
 
