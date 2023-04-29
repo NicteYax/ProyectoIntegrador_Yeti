@@ -28,7 +28,7 @@ window.addEventListener("load", function (event) {
                 <div id="redSocials">
                     <a href="./carrito.html"><img id="car" src="./src/carrito.png" alt="carrito" height="40px"
                             width="40px" /></a>
-                    <a href="./registro.html"><img id="log" src="./src/login.png" alt="registro" height="40px"
+                    <a href="./login.html"><img id="log" src="./src/login.png" alt="registro" height="40px"
                             width="40px" /></a>
                     <a href="https://api.whatsapp.com/send?phone=525534266537&text=Quiero%20informaci%C3%B3n%20sobre%20los%20Yetis,%20porfavor"
                         target="_blank"><img id="wap" src="./src/whatsapp.png" alt="whatsapp" height="40px"
