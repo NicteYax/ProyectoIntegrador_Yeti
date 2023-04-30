@@ -15,7 +15,7 @@ let regexMail = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
 let regexPhone = /^[1-9]{1}[0-9]{9}$/;
 let regexPswd = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*.?&])[A-Za-z\d$@$!%*.?&]{8,100}$/;
 let isValid = true;
-let usuarioObjeto;
+let usuarioObjeto = [];
 
 //FUNCTIONS TO VALID INPUTS
 
@@ -132,7 +132,8 @@ btnSend.addEventListener("click", function (event) {
             "pswd": "${pswd.value}"
         }`;
         
-        usuarioObjeto=JSON.parse(usuario);
+        usuarioObjeto.push(JSON.parse(usuario));
+        // usuarioObjeto=JSON.parse(usuario);
         
         localStorage.setItem("usuario",JSON.stringify(usuarioObjeto));
         
