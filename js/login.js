@@ -11,7 +11,13 @@ let isValid = true;
 let usuario = [];
 // let usuarioObjeto;
 
-
+function validUser() {
+    usuario = JSON.parse(localStorage.getItem("usuario"));
+    for (let i = 0; i < usuario.length; i++) {
+        if (usuario[i].mail == mail.value && usuario[i].pswd == pswd.value) {
+            return true;
+        } 
+    }}
 
 // BUTTON WITH ADD EVENT LISTENER
 
@@ -22,51 +28,41 @@ btnLogIn.addEventListener("click", function (event) {
     isValid = true;
     clearTimeout(idTimeout);
 
-    let alertMsg = "Los siguientes campos deben ser llenados correctamente: <ul>";
-    usuario = JSON.parse(localStorage.getItem("usuario"));
-    for (let i = 0; i < usuario.length; i++) {
-        console.log(usuario);
-        if (usuario[i].mail == mail.value && usuario[i].pswd == pswd.value) {
-            isValid = true;
-            alertVal.style.display = "none";
-            alertValText.innerHTML = "";
-            window.location.href = "./index.html";
+    let alertMsg = "Correo y/o contraseña incorrecta.";
 
-        } else {
-            mail.style.border = "solid thin red";
-            alertMsg += "<li> Correo y/o contraseña incorrecta. </li>";
-            alertVal.style.display = "block";
-            console.log("Error");
-            isValid = false;
-        }
+    if (validUser()){
+        alertVal.style.display = "none";
+        alertValText.innerHTML = "";
+        window.location.href = "./index.html";
+    } else {
+        mail.style.border = "solid thin red";
+        pswd.style.border = "solid thin red";
+        alertVal.style.display = "block";
     }
 
-    alertMsg += "</ul>";
     alertValText.insertAdjacentHTML("beforeend", alertMsg);
 
 });
 
 //FUNCTION BLUR
 
-// mail.addEventListener("blur", function (event) {
-//     event.preventDefault();
-//     mail.value = mail.value.trim();
-//     if (validMail()) {
-//         mail.style.border = "solid thin blue";
-//       } else {
-//         mail.style.border = "solid thin red";
-//       }//else
-// });
+mail.addEventListener("blur", function (event) {
+    event.preventDefault();
+    mail.value = mail.value.trim();
+    if (validUser()) {
+        mail.style.border = "solid thin blue";
+        pswd.style.border = "solid thin blue";
+      } 
+});
 
-// pswd.addEventListener("blur", function (event) {
-//     event.preventDefault();
-//     pswd.value = pswd.value.trim();
-//     if(validPswd()){
-//         pswd.style.border = "solid thin blue";
-//       } else {
-//         pswd.style.border = "solid thin red";
-//     }//else
-// });
+pswd.addEventListener("blur", function (event) {
+    event.preventDefault();
+    pswd.value = pswd.value.trim();
+    if (validUser()) {
+        mail.style.border = "solid thin blue";
+        pswd.style.border = "solid thin blue";
+      } 
+});
 
 // FOCUS IN NAME
 
