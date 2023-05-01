@@ -2,12 +2,24 @@
     font-family: "Rajdhani";
 }
 
+.contenedor {
+    padding: 0%;
+}
+
+#sectionAll{
+    width: 100%;
+}
+
+body{
+    background-color: rgb(29, 38, 64, 1);
+}
+
 /*DESKTOP*/
-@media (min-width: 800px) {
+@media (min-width: 2000px) {
     .contenedor{
     width: 100%;
-    height: 580px;
-    background-image: url("/src/catalogo/inicio.jpg");
+    height: 113rem;
+    background-image: url("/src/catalogo/inicio1.jpg");
     background-size: cover;
     margin-top: 7rem;
 
@@ -17,10 +29,142 @@
         background-color: black;
         opacity: 0.5;
         position: absolute;
-        width: 100.3%;
+        width: 100%;
+        height: 10rem;
+        top: 28rem;
+    }
+    .loncheras{
+        color: white;
+        font-size: 5rem;
+    }
+    
+    .hieleras{
+        color: white;
+        font-size: 5rem;
+    }
+    
+    .termos{
+        color: white;
+        font-size: 5rem;
+    }
+    
+    .tazones{
+        color: white;
+        font-size: 5rem;
+    }
+    
+    .accesorios{
+        color: white;
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 1800px) {
+    .contenedor{
+    width: 100%;
+    height: 38rem;
+    background-image: url("/src/catalogo/inicio2.jpg");
+    background-size: cover;
+    margin-top: 7rem;
+
+    }
+    .menuCat{
+        padding-top: 1rem;
+        background-color: black;
+        opacity: 0.5;
+        position: absolute;
+        width: 100%;
         height: 100px;
-        left: -4px;
-        top: 235px;
+        top: 12rem;
+    }
+    .loncheras{
+        color: white;
+        font-size: 2.3rem;
+    }
+    
+    .hieleras{
+        color: white;
+        font-size: 2.3rem;
+    }
+    
+    .termos{
+        color: white;
+        font-size: 2.3rem;
+    }
+    
+    .tazones{
+        color: white;
+        font-size: 2.3rem;
+    }
+    
+    .accesorios{
+        color: white;
+        font-size: 2.3rem;
+    }
+}
+
+@media (max-width: 1500px) {
+    .contenedor{
+    width: 100%;
+    height: 38rem;
+    background-image: url("/src/catalogo/inicio2.jpg");
+    background-size: cover;
+    margin-top: 7rem;
+
+    }
+    .menuCat{
+        padding-top: 1rem;
+        background-color: black;
+        opacity: 0.5;
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        top: 12rem;
+    }
+    .loncheras{
+        color: white;
+        font-size: 1.5rem;
+    }
+    
+    .hieleras{
+        color: white;
+        font-size: 1.5rem;
+    }
+    
+    .termos{
+        color: white;
+        font-size: 1.5rem;
+    }
+    
+    .tazones{
+        color: white;
+        font-size: 1.5rem;
+    }
+    
+    .accesorios{
+        color: white;
+        font-size: 1.5rem;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .contenedor{
+    width: 100%;
+    height: 40rem;
+    background-image: url("/src/catalogo/inicio1.jpg");
+    background-size: cover;
+    margin-top: 7rem;
+
+    }
+    .menuCat{
+        padding-top: 1rem;
+        background-color: black;
+        opacity: 0.5;
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        top: 12rem;
     }
     .loncheras{
         color: white;
@@ -49,10 +193,10 @@
 }
 
 /*TABLET*/
-@media(max-width:768px) {
+@media(max-width:770px) {
     .contenedor{
     width: 100%;
-    height: 450px;
+    height: 25rem;
     background-image: url("/src/catalogo/inicioTablet.jpg");
     background-size: cover;
     margin-top: 7rem;
@@ -63,10 +207,9 @@
         background-color: black;
         opacity: 0.5;
         position: absolute;
-        width: 100.3%;
+        width: 100%;
         height: 80px;
-        left: -4px;
-        top: 235px;
+        top: 10rem;
     }
     .loncheras{
         color: white;
@@ -94,10 +237,10 @@
     }
 }
 /*MOBILE*/
-@media(max-width:425px) {
+@media(max-width:430px) {
    .contenedor{
     width: 100%;
-    height: 450px;
+    height: 48rem;
     background-image: url("/src/catalogo/inicioMobile.jpg");
     background-size: cover;
     margin-top: 7rem;
@@ -106,7 +249,7 @@
 
     .menuCat{
         background: transparent;
-        margin-top: -13rem;
+        margin-top: -1rem;
     }
     
     .termos{

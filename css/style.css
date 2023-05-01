@@ -135,7 +135,7 @@ main {
 }
 
 /* MOVIL PHONE */
-@media (max-width: 425px) {
+@media (max-width: 430px) {
   nav>.barraContenedor {
     display: grid;
     grid-template-columns: repeat(9, 1fr);

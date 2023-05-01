@@ -70,7 +70,7 @@ btnSend.addEventListener("click", function (event) {
     alertVal.style.display = "none";
     alertValText.innerHTML = "";
     isValid = true;
-    clearTimeout(idTimeout);
+    clearTimeout(idTimeout);    
 
     // ERROR MESSAGES
 
@@ -128,7 +128,7 @@ btnSend.addEventListener("click", function (event) {
         let usuario = `{
             "nombre": "${nameTxt.value}",
             "phone": ${phone.value},
-            "mail": "${mail.value}",
+            "mail": "${mail.value.toLowerCase()}",
             "pswd": "${pswd.value}"
         }`;
         

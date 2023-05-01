@@ -14,7 +14,7 @@ let usuario = [];
 function validUser() {
     usuario = JSON.parse(localStorage.getItem("usuario"));
     for (let i = 0; i < usuario.length; i++) {
-        if (usuario[i].mail == mail.value && usuario[i].pswd == pswd.value) {
+        if (usuario[i].mail == mail.value.toLowerCase() && usuario[i].pswd == pswd.value) {
             return true;
         } 
     }}
