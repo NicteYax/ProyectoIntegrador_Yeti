@@ -10,6 +10,11 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 2rem;
+    padding: 0%;
+}
+
+#sectionAll{
+    width: 100%;
 }
 
 /*FLIP CARD EFFECT*/
@@ -72,8 +77,8 @@
         width: fit-content;
     }
     .sectionAboutUs {
-        height: 57rem;
-        width: 84.8rem;
+        height: 100%;
+        width: 100%;
         font-size: 1.5em;
     
         background-image: url("/src/aboutUs/foto.jpg");
@@ -88,8 +93,8 @@
         margin-left: -20px;
         }
         .center {
-            height: 57rem;
-            width: 84.8rem;
+            height: 100%;
+            width: 100%;
         
             background-image: url("/src/aboutUs/backgroundPic.jpg");
             background-size: cover;
@@ -105,8 +110,8 @@
         
         
         .msnAboutUs {
-            width: 68rem;
-            height: 30rem;
+            width: 100%;
+            height: 100%;
             margin: 0px auto;
         
             background-color: aliceblue;
@@ -179,8 +184,8 @@
         width: fit-content;
     }
     .sectionAboutUs {
-        width: 49.29rem;
-        height: 25rem;
+        width: 100%;
+        height: 100%;
         font-size: 1em;
     
         background-image: url("/src/aboutUs/foto.jpg");
@@ -192,11 +197,10 @@
         align-items: center;
         justify-content: center;
         margin-bottom: 40px;
-        margin-left: -25px;
         }
         .center {
-            height: 23rem;
-            width: 48.7rem;
+            height: 100%;
+            width: 100%;
         
             background-image: url("/src/aboutUs/backgroundPic.jpg");
             background-size: cover;
@@ -207,7 +211,6 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 40px;
-            margin-left: -15px;
         }
         
         
@@ -293,8 +296,8 @@
     }
 
     .sectionAboutUs {
-        width: 23.6rem;
-        height: 17rem;
+        width: 100%;
+        height: 100%;
         font-size: 1em;
     
         background-image: url("/src/aboutUs/foto2.jpg");
@@ -307,11 +310,11 @@
         justify-content: center;
         margin-top: -25px;
         margin-bottom: 15px;
-        margin-left: -15px;
+
         }
         .center {
-            width: 23.6rem;
-            height: 17rem;
+            width: 100%;
+            height: 100%;
         
             background-image: url("/src/aboutUs/backgroundPic2.jpg");
             background-size: cover;
@@ -322,7 +325,7 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 20px;
-            margin-left: -15px;
+      
         }
         
         
