@@ -10,6 +10,11 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 2rem;
+    padding: 0%;
+}
+
+#sectionAll{
+    width: 100%;
 }
 
 /*FLIP CARD EFFECT*/
@@ -73,7 +78,7 @@
     }
     .sectionAboutUs {
         height: 57rem;
-        width: 84.8rem;
+        width: 100%;
         font-size: 1.5em;
     
         background-image: url("/src/aboutUs/foto.jpg");
@@ -85,11 +90,11 @@
         align-items: center;
         justify-content: center;
         margin-bottom: 40px;
-        margin-left: -20px;
+
         }
         .center {
             height: 57rem;
-            width: 84.8rem;
+            width: 100%;
         
             background-image: url("/src/aboutUs/backgroundPic.jpg");
             background-size: cover;
@@ -100,7 +105,7 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 40px;
-            margin-left: -20px;
+           
         }
         
         
@@ -170,6 +175,21 @@
         }
 }
 
+/* LAPTOP 1024 */
+@media (max-width: 1025px){
+    .msnAboutUs {
+        width: 40rem;
+        padding: 50px;
+    }
+
+    .opacityTxt {
+        width: 42rem;
+        padding: 20px;
+        height: 15rem;
+    }
+    
+}
+
 /* TABLET */
 @media (max-width: 785px) {
     .container-fluid> #integrants{
@@ -179,7 +199,7 @@
         width: fit-content;
     }
     .sectionAboutUs {
-        width: 49.29rem;
+        width: 100%;
         height: 25rem;
         font-size: 1em;
     
@@ -192,11 +212,10 @@
         align-items: center;
         justify-content: center;
         margin-bottom: 40px;
-        margin-left: -25px;
         }
         .center {
             height: 23rem;
-            width: 48.7rem;
+            width: 100%;
         
             background-image: url("/src/aboutUs/backgroundPic.jpg");
             background-size: cover;
@@ -207,7 +226,6 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 40px;
-            margin-left: -15px;
         }
         
         
@@ -271,7 +289,7 @@
 }
 
 /* MOVIL PHONE */
-@media (max-width: 380px) {
+@media (max-width: 430px) {
     .container-fluid> #integrants{
         display: grid;
         gap: 2rem;
@@ -293,7 +311,7 @@
     }
 
     .sectionAboutUs {
-        width: 23.6rem;
+        width: 100%;
         height: 17rem;
         font-size: 1em;
     
@@ -307,10 +325,10 @@
         justify-content: center;
         margin-top: -25px;
         margin-bottom: 15px;
-        margin-left: -15px;
+
         }
         .center {
-            width: 23.6rem;
+            width: 100%;
             height: 17rem;
         
             background-image: url("/src/aboutUs/backgroundPic2.jpg");
@@ -322,7 +340,7 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 20px;
-            margin-left: -15px;
+      
         }
         
         
