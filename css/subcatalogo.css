@@ -1,0 +1,24 @@
+* {
+    font-family: "Rajdhani";
+}
+
+.contenedor {
+    padding: 0;
+}
+
+#banner{
+    width: 200%;
+}
+
+#titleImage {
+    margin: 2rem;
+    font-weight: bold;
+    color: rgb(29, 38, 64, 1);
+    text-align: center;
+}
+
+@media (max-width: 425px) {
+    #banner {
+        margin-top: -1.5rem;
+    }
+}

@@ -71,7 +71,7 @@ function validPswd() {
 };
 
 function validPswdRepeat() {
-    if (pswd.value === pswdRepeat.value && validPswd()) {
+    if (pswd.value === pswdRepeat.value) {
         return true;
     } else {
         return false;
@@ -129,10 +129,9 @@ btnSend.addEventListener("click", function (event) {
 
     if (!validPswd()) {
         pswd.style.border = "solid thin red";
-        alertMsg += "<li> Debe incluir al menos 8 caractéres, 1 mayúscula, 1 minúscula, 1 número, 1 caracter especial: @$!%*.?& y no debe contener espacios.</li>";
+        alertMsg += "<li> La contraseña debe incluir al menos 8 caracteres, 1 mayúscula, 1 minúscula, 1 número, 1 caracter especial: @$!%*.?& y no debe contener espacios.</li>";
         alertVal.style.display = "block";
         isValid = false;
-        pswd.value = "";
     } else {
         pswd.style.border = "solid thin blue";
     }
@@ -141,7 +140,6 @@ btnSend.addEventListener("click", function (event) {
         alertMsg += "<li> La contraseña no coincide.</li>";
         alertVal.style.display = "block";
         isValid = false;
-        pswdRepeat.value = "";
     } else {
         pswdRepeat.style.border = "solid thin blue";
     }

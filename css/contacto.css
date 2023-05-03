@@ -8,6 +8,10 @@
     width: auto;
 }
 
+.contenedor {
+    padding: 0;
+}
+
 #banner {
     grid-column: 1/13;
     margin-bottom: 3rem;
@@ -20,6 +24,7 @@
 #titleContact {
     margin: 2rem;
     font-weight: bold;
+    color: rgb(29, 38, 64, 1);
 }
 
 #fControl {
@@ -61,14 +66,9 @@
     #banner {
         grid-column: 1/13;
         margin-bottom: 3rem;
-        margin-top: -1rem;
+        margin-top: -1.5rem;
         width: 100%;
         height: auto;
-        /*text-align: center*/
-    }
-
-    #titleContact {
-        font-weight: bold;
     }
 
     #fControl {
