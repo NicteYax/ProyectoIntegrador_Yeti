@@ -41,6 +41,7 @@ function validPhone() {
 // VALID EMAIL
 function validMail() {
     if (mail.value.match(regexMail)) {
+        
         return true;
     }
     return false;
@@ -60,6 +61,16 @@ function validPswdRepeat() {
     } else {
         pswdRepeat.value = "";
         return false;
+    }
+}
+
+function validRepeatMail(){
+    usuarioObjeto = JSON.parse(localStorage.getItem("usuario"));
+ 
+     for (let i = 0; i < usuarioObjeto.length; i++) {
+        if (usuarioObjeto[i].mail == mail.value.toLowerCase()) {
+            return true;
+         } 
     }
 }
 
@@ -121,7 +132,18 @@ btnSend.addEventListener("click", function (event) {
         pswdRepeat.style.border = "solid thin blue";
     }
 
+    if (validRepeatMail()) {
+        mail.style.border = "solid thin red";
+        alertMsg += "<li> Esta dirección de correo ya está registrada.</li>";
+        alertVal.style.display = "block";
+        isValid = false;
+    } else {
+        mail.style.border = "solid thin blue";
+    }
+
+
     // IF IS VALID = TRUE, SEND EMAIL WITH API "EMAILJS"
+    
 
     if (isValid) {
         //JSON
@@ -131,7 +153,7 @@ btnSend.addEventListener("click", function (event) {
             "mail": "${mail.value.toLowerCase()}",
             "pswd": "${pswd.value}"
         }`;
-        
+
         usuarioObjeto.push(JSON.parse(usuario));
         // usuarioObjeto=JSON.parse(usuario);
         

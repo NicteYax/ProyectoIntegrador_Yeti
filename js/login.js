@@ -31,9 +31,23 @@ btnLogIn.addEventListener("click", function (event) {
     let alertMsg = "Correo y/o contraseña incorrecta.";
 
     if (validUser()){
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Bienvenido',
+            showConfirmButton: false,
+            timer: 2500
+        })
+
         alertVal.style.display = "none";
         alertValText.innerHTML = "";
-        window.location.href = "./index.html";
+
+        idTimeout = setTimeout(function () {
+            window.location.href = "./index.html";
+            
+        }, 1000);
+
+        
     } else {
         mail.style.border = "solid thin red";
         pswd.style.border = "solid thin red";
@@ -66,7 +80,23 @@ pswd.addEventListener("blur", function (event) {
 
 // FOCUS IN NAME
 
-window.addEventListener("load", function (event) {
-    mail.focus();
-});
 
+window.addEventListener("load", function (event) {
+    mail.focus();  
+    if (localStorage.getItem("usuario") != null) {
+        usuario = JSON.parse(localStorage.getItem("usuario"));
+    }
+    else {
+
+    usuario = [{
+            "nombre": "Admin",
+            "phone": "3333333333",
+            "mail": "yetisgeneration@gmail.com",
+            "pswd": "Prueba1."
+        }];
+
+      localStorage.setItem("usuario", JSON.stringify(usuario));
+    
+  
+    }
+  });
