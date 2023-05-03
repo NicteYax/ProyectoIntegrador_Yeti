@@ -23,6 +23,16 @@
     margin-top: 1rem;
 }
 
+#password{
+    position: relative;
+    }
+    
+    #togglePassword{
+        position: absolute;
+        top: 30%;
+        margin-left: 93%;
+    }
+
 @media (max-width: 768px){
     #fLogIn {
         background-color: #E9E9E9;
