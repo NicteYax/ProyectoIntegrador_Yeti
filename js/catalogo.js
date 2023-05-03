@@ -148,7 +148,17 @@ window.addEventListener("load", function (event) {
               "Casi 24 horas de agua para seguirte desde el gimnasio hasta el rancho y de vuelta a casa.",
             "category": "Termos",
             "image": "/src/catalogo/Termos/TERMO GALÓN.png"
-          }];
+          },
+          {
+            "id": 17,
+            "title": "Termo Galón",
+            "price": 0,
+            "description":
+              "Casi 24 horas de agua para seguirte desde el gimnasio hasta el rancho y de vuelta a casa.",
+            "category": "Termos",
+            "image": "/src/catalogo/Termos/TERMO GALÓN.png"
+          }
+        ];
 
       localStorage.setItem("datos", JSON.stringify(productos));
       

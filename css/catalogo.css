@@ -19,7 +19,7 @@ body{
     .contenedor{
     width: 100%;
     height: 113rem;
-    background-image: url("/src/catalogo/inicio1.jpg");
+    background-image: url("/src/catalogo/inicio2.jpg");
     background-size: cover;
     margin-top: 7rem;
 
@@ -57,12 +57,12 @@ body{
         color: white;
         font-size: 5rem;
     }
-}
+} 
 
-@media (max-width: 1800px) {
+@media (max-width: 1950px) {
     .contenedor{
     width: 100%;
-    height: 38rem;
+    height: 50rem;
     background-image: url("/src/catalogo/inicio2.jpg");
     background-size: cover;
     margin-top: 7rem;
