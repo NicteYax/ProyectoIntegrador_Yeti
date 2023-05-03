@@ -6,10 +6,20 @@ let pswd = document.getElementById("pswd");
 let btnLogIn = document.getElementById("btnLogIn");
 let alertVal = document.getElementById("alertVal");
 let alertValText = document.getElementById("alertValText");
+let togglePassword = document.getElementById("togglePassword");
 let idTimeout;
 let isValid = true;
 let usuario = [];
-// let usuarioObjeto;
+
+// TOGGLE PASSWORD 
+
+togglePassword.addEventListener("click", function(e) {
+    const type = pswd.getAttribute("type") === "password" ? "text" : "password";
+    pswd.setAttribute("type", type);
+    this.classList.toggle("fa-eye-slash");
+});
+
+// VALID USER
 
 function validUser() {
     usuario = JSON.parse(localStorage.getItem("usuario"));

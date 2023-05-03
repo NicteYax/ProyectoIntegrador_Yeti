@@ -9,6 +9,8 @@ let pswdRepeat = document.getElementById("pswdRepeat");
 let btnSend = document.getElementById("btnSend");
 let alertVal = document.getElementById("alertVal");
 let alertValText = document.getElementById("alertValText");
+let togglePassword = document.getElementById("togglePassword");
+let togglePasswordRpt = document.getElementById("togglePasswordRpt");
 let idTimeout;
 let regexName = /^[A-Za-zéáíóúñÑÁÉÍÓÚ\s]+$/;
 let regexMail = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
@@ -16,6 +18,20 @@ let regexPhone = /^[1-9]{1}[0-9]{9}$/;
 let regexPswd = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*.?&])[A-Za-z\d$@$!%*.?&]{8,100}$/;
 let isValid = true;
 let usuarioObjeto = [];
+
+// TOGGLE PASSWORD 
+
+togglePassword.addEventListener("click", function() {
+    const type = pswd.getAttribute("type") === "password" ? "text" : "password";
+    pswd.setAttribute("type", type);
+    this.classList.toggle("fa-eye-slash");
+});
+
+togglePasswordRpt.addEventListener("click", function() {
+    const type = pswdRepeat.getAttribute("type") === "password" ? "text" : "password";
+    pswdRepeat.setAttribute("type", type);
+    this.classList.toggle("fa-eye-slash");
+});
 
 //FUNCTIONS TO VALID INPUTS
 
@@ -41,7 +57,6 @@ function validPhone() {
 // VALID EMAIL
 function validMail() {
     if (mail.value.match(regexMail)) {
-        
         return true;
     }
     return false;
@@ -59,7 +74,6 @@ function validPswdRepeat() {
     if (pswd.value === pswdRepeat.value && validPswd()) {
         return true;
     } else {
-        pswdRepeat.value = "";
         return false;
     }
 }
@@ -134,17 +148,15 @@ btnSend.addEventListener("click", function (event) {
 
     if (validRepeatMail()) {
         mail.style.border = "solid thin red";
-        alertMsg += "<li> Esta dirección de correo ya está registrada.</li>";
+        alertMsg = "Esta dirección de correo ya está registrada.";
         alertVal.style.display = "block";
         isValid = false;
     } else {
         mail.style.border = "solid thin blue";
     }
 
-
     // IF IS VALID = TRUE, SEND EMAIL WITH API "EMAILJS"
     
-
     if (isValid) {
         //JSON
         let usuario = `{
@@ -154,9 +166,7 @@ btnSend.addEventListener("click", function (event) {
             "pswd": "${pswd.value}"
         }`;
 
-        usuarioObjeto.push(JSON.parse(usuario));
-        // usuarioObjeto=JSON.parse(usuario);
-        
+        usuarioObjeto.push(JSON.parse(usuario));  
         localStorage.setItem("usuario",JSON.stringify(usuarioObjeto));
         
         nameTxt.value = "";

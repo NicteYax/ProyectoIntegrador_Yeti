@@ -23,6 +23,26 @@
     margin-top: 1rem;
 }
 
+#password{
+    position: relative;
+    }
+    
+    #togglePassword{
+        position: absolute;
+        top: 30%;
+        margin-left: 95%;
+    }
+
+#passwordRpt{
+    position: relative;
+    }
+        
+#togglePasswordRpt{
+    position: absolute;
+    top: 30%;
+    margin-left: 95%;
+    }
+
 @media (max-width: 768px){
     #fRegistro {
         background-color: #E9E9E9;
@@ -44,7 +64,7 @@
 }
 
 
-@media (max-width: 425px){
+@media (max-width: 430px){
 #fRegistro {
     background-color: #E9E9E9;
     border-radius: 10px;
@@ -65,7 +85,7 @@
 }
 }
 
-@media (max-width: 375px){
+@media (max-width: 380px){
     #fRegistro {
         background-color: #E9E9E9;
         border-radius: 10px;
@@ -84,9 +104,17 @@
         margin-top: 0.3rem;
         width: 18rem;
     }
+
+    #togglePassword{
+        margin-left: 90%;
     }
 
-@media (max-width: 320px){
+    #togglePasswordRpt{
+        margin-left: 90%;
+    }
+    }
+
+@media (max-width: 325px){
     #fRegistro {
         background-color: #E9E9E9;
         border-radius: 10px;
@@ -104,5 +132,13 @@
     .info{
         margin-top: 0.3rem;
         width: 15rem;
+    }
+
+    #togglePassword{
+        margin-left: 90%;
+    }
+    
+    #togglePasswordRpt{
+        margin-left: 90%;
     }
     }
