@@ -1,35 +1,46 @@
 let producto = JSON.parse(localStorage.getItem("datos"));
-let filtro="Hieleras";
+let filtro = "Hieleras";
+let catalogo = document.getElementById("main");
+let btnAgregar = document.getElementById("btnAgregar");
 
-      let catalogo =document.getElementById("main");
+window.addEventListener("load", function (event) {
+  if (localStorage.getItem("datos") != null) {
+    producto = JSON.parse(localStorage.getItem("datos"));
+  }
+  else {
+  }
+});
 
-      window.addEventListener("load", function (event) {
-        if (localStorage.getItem("datos") != null) {
-          producto = JSON.parse(localStorage.getItem("datos"));
-        }
-        else {
-        }
-      });
+if (sessionStorage.getItem("usuarioLogin") == "NoLogin") {
+  btnAgregar.style.display = "none";
+}
+else {
+  let usuario = JSON.parse(sessionStorage.getItem("usuarioLogin"));
+  if (usuario.nombre != "Admin")
+  {
+    btnAgregar.style.display = "none";
+  }
+}
 
 
-      producto = JSON.parse(localStorage.getItem("datos"));
-      let productosFiltrado = [];
-      productosFiltrado = producto.filter((producto) => producto.category == filtro);
+producto = JSON.parse(localStorage.getItem("datos"));
+let productosFiltrado = [];
+productosFiltrado = producto.filter((producto) => producto.category == filtro);
 
-      mostrarProducto(productosFiltrado);
+mostrarProducto(productosFiltrado);
 
-      function mostrarProducto(datos) {
+function mostrarProducto(datos) {
 
-        totalProductos = datos.length;
-        for (let i = 0; i < totalProductos; i++) {
-    
-            let card = `
+  totalProductos = datos.length;
+  for (let i = 0; i < totalProductos; i++) {
+
+    let card = `
             <div class="card cardProduct" style="width: 18rem;">
                 <img src="${datos[i].image}" class="card-img-top" alt="...">
                 <div class="card-body">
                 <h5 class="card-title">${datos[i].title}</h5>
                 <p class="card-text descriptionCard">${datos[i].description.slice(0, 60
-                )}...</p>
+    )}...</p>
                 <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal_${datos[i].id}">Más info </button>
                 </div>
               </div>
@@ -53,12 +64,11 @@ let filtro="Hieleras";
                   </div>
                   </div>
             `;
-    
-            catalogo.insertAdjacentHTML("beforeend", card);
-        }
+
+    catalogo.insertAdjacentHTML("beforeend", card);
+  }
 
 
 
-    }
+}
 
-    

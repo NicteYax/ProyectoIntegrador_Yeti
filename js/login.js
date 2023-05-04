@@ -25,6 +25,7 @@ function validUser() {
     usuario = JSON.parse(localStorage.getItem("usuario"));
     for (let i = 0; i < usuario.length; i++) {
         if (usuario[i].mail == mail.value.toLowerCase() && usuario[i].pswd == pswd.value) {
+            sessionStorage.setItem("usuarioLogin",JSON.stringify(usuario[i]));
             return true;
         } 
     }}
@@ -41,6 +42,7 @@ btnLogIn.addEventListener("click", function (event) {
     let alertMsg = "Correo y/o contraseña incorrecta.";
 
     if (validUser()){
+        
         Swal.fire({
             position: 'center',
             icon: 'success',
