@@ -1,4 +1,4 @@
-"use strict"
+'use strict'
 
 // ACCESS TO DOM
 let mail = document.getElementById("mail");
