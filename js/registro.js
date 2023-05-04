@@ -179,6 +179,12 @@ btnSend.addEventListener("click", function (event) {
             showConfirmButton: false,
             timer: 2500
         })
+        idTimeout = setTimeout(function () {
+            window.location.href = "./login.html";
+            
+        }, 1000);
+
+
     }
 
     alertMsg += "</ul>";
