@@ -149,17 +149,9 @@ window.addEventListener("load", function (event) {
             "category": "Termos",
             "image": "/src/catalogo/Termos/TERMO GALÓN.png"
           },
-          {
-            "id": 17,
-            "title": "Termo Galón",
-            "price": 0,
-            "description":
-              "Casi 24 horas de agua para seguirte desde el gimnasio hasta el rancho y de vuelta a casa.",
-            "category": "Termos",
-            "image": "/src/catalogo/Termos/TERMO GALÓN.png"
-          },
          {
-            "title": "Lonchera de bolsa Daytrip Rosa",
+          "id": 17,  
+          "title": "Lonchera de bolsa Daytrip Rosa",
             "price": 2600,
             "description":
               "Tamaño para comida personal, construido para situaciones duraderas. Para 6 latas (solo)",
@@ -385,7 +377,7 @@ window.addEventListener("load", function (event) {
           {
             "id": 42,
             "title": "Tapa Magslider para Rambler Chug",
-            "price": 260.00,
+            "price": 260,
             "description":
               "Sacia inmediatamente tu sed a través de la buena tecnología de chugging pasada de moda. Esta tapa cabe en todas las botellas de agua Rambler.",
             "category": "Accesorios",
@@ -394,7 +386,7 @@ window.addEventListener("load", function (event) {
           {
             "id": 43,
             "title": "Magsliders neutros",
-            "price": 180.00,
+            "price": 180,
             "description":
               "Separe su Rambler aparte en un paquete de vasos.",
             "category": "Pendiente",
