@@ -12,7 +12,7 @@ let alertValText = document.getElementById("alertValText");
 let idTimeout;
 let regexName = /^[A-Za-zéáíóúñÑÁÉÍÓÚ\s]+$/;
 let regexMail = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
-let regexPrice = /\d{1,3}(?:[.,]\d{3})*(?:[.,]\d{2})/;
+let regexPrice =/^[1-9]\d*$/
 let isValid = true;
 let id;
 let datos = [];

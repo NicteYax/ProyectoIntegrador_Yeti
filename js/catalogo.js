@@ -385,7 +385,7 @@ window.addEventListener("load", function (event) {
           {
             "id": 42,
             "title": "Tapa Magslider para Rambler Chug",
-            "price": 260,
+            "price": 260.00,
             "description":
               "Sacia inmediatamente tu sed a través de la buena tecnología de chugging pasada de moda. Esta tapa cabe en todas las botellas de agua Rambler.",
             "category": "Accesorios",
@@ -394,7 +394,7 @@ window.addEventListener("load", function (event) {
           {
             "id": 43,
             "title": "Magsliders neutros",
-            "price": 180,
+            "price": 180.00,
             "description":
               "Separe su Rambler aparte en un paquete de vasos.",
             "category": "Pendiente",
