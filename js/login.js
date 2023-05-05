@@ -10,6 +10,7 @@ let togglePassword = document.getElementById("togglePassword");
 let idTimeout;
 let isValid = true;
 let usuario = [];
+let alertMsg = "";
 
 // TOGGLE PASSWORD 
 
@@ -24,10 +25,19 @@ togglePassword.addEventListener("click", function(e) {
 function validUser() {
     usuario = JSON.parse(localStorage.getItem("usuario"));
     for (let i = 0; i < usuario.length; i++) {
-        if (usuario[i].mail == mail.value.toLowerCase() && usuario[i].pswd == pswd.value) {
+        if (usuario[i].mail == mail.value.toLowerCase()) {
+            if (usuario[i].pswd == pswd.value) {
             sessionStorage.setItem("usuarioLogin",JSON.stringify(usuario[i]));
             return true;
-        } 
+            }
+            else {
+                alertMsg = "Contraseña incorrecta."
+                return false;
+            }
+        } else {
+            alertMsg = "Correo no registrado."
+            return false;
+        }
     }}
 
 // BUTTON WITH ADD EVENT LISTENER
@@ -38,8 +48,6 @@ btnLogIn.addEventListener("click", function (event) {
     alertValText.innerHTML = "";
     isValid = true;
     clearTimeout(idTimeout);
-
-    let alertMsg = "Correo y/o contraseña incorrecta.";
 
     if (validUser()){
         
