@@ -3,6 +3,8 @@ let filtro = "Termos";
 let catalogo = document.getElementById("main");
 let btnAgregar = document.getElementById("btnAgregar");
 
+
+
 window.addEventListener("load", function (event) {
   if (localStorage.getItem("datos") != null) {
     producto = JSON.parse(localStorage.getItem("datos"));
@@ -28,6 +30,20 @@ let productosFiltrado = [];
 productosFiltrado = producto.filter((producto) => producto.category == filtro);
 
 mostrarProducto(productosFiltrado);
+
+let btnAdd =  document.getElementsByName("btnAdd");
+
+for(let i = 0 ; i<btnAdd.length ; i++)
+{
+  
+  btnAdd[i].addEventListener("click", function (event) {
+  console.log(productosFiltrado[i]);
+
+});
+
+}
+
+
 
 function mostrarProducto(datos) {
 
@@ -58,7 +74,7 @@ function mostrarProducto(datos) {
                  <p class="text-end"><strong> $ ${datos[i].price} MXN </strong></p>
                   </div>
                   <div class="modal-footer">
-                  <button type="button" class="btn" data-bs-dismiss="modal">Añadir a carrito</button>
+                  <button type="button" class="btn" data-bs-dismiss="modal" name="btnAdd">Añadir a carrito</button>
                   </div>
                   </div>
                   </div>
