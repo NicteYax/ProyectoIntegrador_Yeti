@@ -39,13 +39,11 @@
     height: auto;
     margin-bottom: 3rem;
 }
-/* LAPTOP 1440 */
-@media (max-width: 1500px){
-    .col-md-7{
+
+.col-md-7{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        }
 }
 
 /* LAPTOP 1024 */
@@ -53,11 +51,11 @@
     .contenedor {
         padding: 0;
     } 
-    .col-md-7{
+    /* .col-md-7{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    }
+    } */
 }
 
 /*DESKTOP*/
