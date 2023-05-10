@@ -11,7 +11,7 @@
     grid-column: 5/10;
     margin-bottom: 3.5rem;
     margin-top: 0.5rem;
-    width: 30rem;
+    width: auto;
     height: 90%;
     text-align: justify;
     background-color: #E9E9E9;
@@ -46,6 +46,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 30rem;
     }
     .info{
         margin-top: 0.3rem;
@@ -54,25 +55,33 @@
 }
 
 
-@media (max-width: 425px){
+@media (max-width: 430px){
+
+#main {
+    justify-content: center;
+    /* margin-left: 30px; */
+}
 #fLogIn {
     background-color: #E9E9E9;
     border-radius: 10px;
-    grid-column: 1/13;
+    grid-column: 1/10;
     grid-row: 2;
     padding: 1rem 2rem 1rem 2rem;
-    margin-bottom: 5rem;
-    align-content: center;
     margin-top: -1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 5rem;
+    width: 25rem;
+    align-content: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 2rem;
+    /* margin-left: 2rem; */
 }
 
 .info{
     margin-top: 0.3rem;
-    width: 18rem;
+    width: 22rem;
 }
 }
 
@@ -89,16 +98,29 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 21.5rem;
     }
     
     .info{
         margin-top: 0.3rem;
         width: 18rem;
     }
+
+    #togglePassword{
+        position: absolute;
+        top: 30%;
+        margin-left: 91%;
+    }
     }
 
-@media (max-width: 320px){
-    #fLogin {
+@media (max-width: 325px){
+
+    /* #main {
+        justify-content: center;
+        margin-left: 30px;
+    } */
+
+    #fLogIn {
         background-color: #E9E9E9;
         border-radius: 10px;
         grid-column: 1/13;
@@ -110,11 +132,18 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 18rem;
     }
     
     .info{
         margin-top: 0.3rem;
-        width: 18rem;
+        width: 15rem;
+    }
+
+    #togglePassword{
+        position: absolute;
+        top: 30%;
+        margin-left: 90%;
     }
     }
 
