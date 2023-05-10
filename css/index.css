@@ -17,12 +17,17 @@
   }
   .featurette-heading{
     color: rgb(29, 38, 64, 1);
-    font-weight: bolder;
+    font-weight: bolder!important;
+  }
+  .lead{
+    text-align: justify;
+    margin-bottom: 1.5rem;
   }
 
   .featurette-heading .lead {
     justify-content: center;
     justify-items: center;
+    text-align: justify;
   }
   
 #carousel{
@@ -32,12 +37,21 @@
     height: auto;
     text-align: center;
 }
+a{
+    color: rgb(29, 38, 64, 1);
+    background-color: transparent;
+    text-decoration: none;
+  }
 
+a:hover {
+  color:rgb(29, 38, 64, 1);
+}
 
 .img-fluid {
     max-width: 100%;
     height: auto;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    border-radius: 15px;
 }
 
 .col-md-7{
