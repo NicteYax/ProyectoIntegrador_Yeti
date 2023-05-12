@@ -11,7 +11,7 @@ window.addEventListener("load", function (event) {
   }
 });
 
-if (sessionStorage.getItem("usuarioLogin") == "NoLogin") {
+if (sessionStorage.getItem("usuarioLogin") == null) {
   btnAgregar.style.display = "none";
 }
 else {

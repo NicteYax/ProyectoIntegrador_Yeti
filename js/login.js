@@ -24,19 +24,19 @@ togglePassword.addEventListener("click", function(e) {
 
 function validUser() {
     usuario = JSON.parse(localStorage.getItem("usuario"));
+    usuario = JSON.parse(localStorage.getItem("usuario"));
     for (let i = 0; i < usuario.length; i++) {
         if (usuario[i].mail == mail.value.toLowerCase()) {
+            console.log("exito");
             if (usuario[i].pswd == pswd.value) {
             sessionStorage.setItem("usuarioLogin",JSON.stringify(usuario[i]));
             return true;
             }
             else {
                 alertMsg = "Contraseña incorrecta."
-                return false;
             }
         } else {
             alertMsg = "Correo no registrado."
-            return false;
         }
     }}
 

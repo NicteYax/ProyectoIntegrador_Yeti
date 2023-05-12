@@ -71,10 +71,12 @@ function validPswd() {
 };
 
 function validPswdRepeat() {
-    if (pswd.value === pswdRepeat.value) {
+    if (pswdRepeat.value.length > 0) {
+        if (pswd.value === pswdRepeat.value) {
         return true;
     } else {
         return false;
+    }
     }
 }
 
@@ -124,7 +126,16 @@ btnSend.addEventListener("click", function (event) {
         alertVal.style.display = "block";
         isValid = false;
     } else {
-        mail.style.border = "solid thin blue";
+
+        if (validRepeatMail()) {
+            mail.style.border = "solid thin red";
+            alertMsg = "Esta dirección de correo ya está registrada.";
+            alertVal.style.display = "block";
+            isValid = false;
+        } else {
+            mail.style.border = "solid thin blue";
+        }
+
     }
 
     if (!validPswd()) {
@@ -144,14 +155,16 @@ btnSend.addEventListener("click", function (event) {
         pswdRepeat.style.border = "solid thin blue";
     }
 
-    if (validRepeatMail()) {
-        mail.style.border = "solid thin red";
-        alertMsg = "Esta dirección de correo ya está registrada.";
-        alertVal.style.display = "block";
-        isValid = false;
-    } else {
-        mail.style.border = "solid thin blue";
-    }
+
+
+    // if (validRepeatMail()) {
+    //     mail.style.border = "solid thin red";
+    //     alertMsg = "Esta dirección de correo ya está registrada.";
+    //     alertVal.style.display = "block";
+    //     isValid = false;
+    // } else {
+    //     mail.style.border = "solid thin blue";
+    // }
 
     // IF IS VALID = TRUE, SEND EMAIL WITH API "EMAILJS"
     
