@@ -5,22 +5,16 @@ let body = document.getElementById("body")
 
 let direccionLogin = "";
 
-if (sessionStorage.getItem("usuarioLogin") == "NoLogin") {
-    direccionLogin = "./login.html"
-  }
-else {
-    direccionLogin = "./user.html"
-}
-
 
 // INSERT NAV AND FOOTER AFTER LOAD WINDOW
 window.addEventListener("load", function (event) {
 
     if (sessionStorage.getItem("usuarioLogin") == null) {
-        sessionStorage.setItem("usuarioLogin","NoLogin");
-      }
+        direccionLogin = "./login.html";
+    } else {
+        direccionLogin = "./user.html";
+    }
 
-      
 
     // NAV BAR
     main.insertAdjacentHTML("beforebegin", `
@@ -103,5 +97,6 @@ window.addEventListener("load", function (event) {
     </footer>
     </div>
     `);
+
 
 }); //WINDOW-LOAD
