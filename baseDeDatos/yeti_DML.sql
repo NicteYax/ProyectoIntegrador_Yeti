@@ -6,6 +6,9 @@ VALUES ('Termos'), ('Hieleras'), ('Loncheras'), ('Tazones'), ('Accesorios');
 ALTER TABLE productos MODIFY COLUMN descripcion VARCHAR(500);
 ALTER TABLE productos ADD COLUMN imagen VARCHAR(10000);
 
+ALTER TABLE productos ADD COLUMN imagen VARCHAR(10000);
+
+
 INSERT INTO productos (nombre, descripcion, precio, idcategoria)
 VALUES 
 	('Apilable 26 oz', 'Una taza grande para grandes tragos: perfecta para tés, agua fría o batidos XL. Cabe en la mayoría de los portavasos.', 1300, 1),
