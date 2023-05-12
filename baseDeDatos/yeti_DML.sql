@@ -4,6 +4,7 @@ INSERT INTO categorias (nombre)
 VALUES ('Termos'), ('Hieleras'), ('Loncheras'), ('Tazones'), ('Accesorios');
 
 ALTER TABLE productos MODIFY COLUMN descripcion VARCHAR(500);
+ALTER TABLE productos ADD COLUMN imagen VARCHAR(10000);
 
 INSERT INTO productos (nombre, descripcion, precio, idcategoria)
 VALUES 
