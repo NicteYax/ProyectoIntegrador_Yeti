@@ -3,13 +3,15 @@
 let main = document.getElementById("main")
 let body = document.getElementById("body")
 
-let direccionLogin = "";
+let direccionLogin = "./login.html";
 
 
 // INSERT NAV AND FOOTER AFTER LOAD WINDOW
 window.addEventListener("load", function (event) {
 
     if (sessionStorage.getItem("usuarioLogin") == null) {
+        sessionStorage.setItem("usuarioLogin","NoLogin");
+
         direccionLogin = "./login.html";
     } else {
         direccionLogin = "./user.html";
