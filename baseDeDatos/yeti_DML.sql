@@ -3,12 +3,6 @@ USE yetipersonalizadomx;
 INSERT INTO categorias (nombre)
 VALUES ('Termos'), ('Hieleras'), ('Loncheras'), ('Tazones'), ('Accesorios');
 
-ALTER TABLE productos MODIFY COLUMN descripcion VARCHAR(500);
-ALTER TABLE productos ADD COLUMN imagen VARCHAR(10000);
-
-ALTER TABLE productos ADD COLUMN imagen VARCHAR(10000);
-
-
 INSERT INTO productos (nombre, descripcion, precio, idcategoria)
 VALUES 
 	('Apilable 26 oz', 'Una taza grande para grandes tragos: perfecta para tés, agua fría o batidos XL. Cabe en la mayoría de los portavasos.', 1300, 1),
@@ -73,10 +67,10 @@ VALUES
     ('Magsliders tonos fríos', 'Separe su Rambler aparte en un paquete de vasos.', 180, 5 ),
     ('Magsliders tonos fríos', 'Separe su Rambler aparte en un paquete de vasos.', 180, 5);
     
-ALTER TABLE usuarios MODIFY COLUMN phone VARCHAR(10);
     
 INSERT INTO usuarios (nombre, phone, mail, `password`)
 VALUES 
+	('Admin', '3333333333', 'yetisgeneration@gmail.com', 'Prueba1.'),
 	('Ana Gabriela', '3333801838', 'anarizollacaa2@gmail.com', 'AnaGaby.1'),
     ('Ana Paula', '3345937151', 'ap.batiz@gmail.com', 'AnaPau.2'),
     ('Carlos', '3313003350', 'carlosicg07@gmail.com', 'Carlos.3'),
@@ -86,28 +80,3 @@ VALUES
     ('Leslie', '3333777068', 'leslie.garciardgz@gmail.com', 'Leslie.7'),
     ('Karime', '3320708308', 'kaledon95@gmail.com', 'Karime.8'),
     ('Nicté', '3310736244', 'nicte.ycc@gmail.com', 'NicteY.9');
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
