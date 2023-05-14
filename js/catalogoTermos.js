@@ -2,6 +2,7 @@ let producto = JSON.parse(localStorage.getItem("datos"));
 let filtro = "Termos";
 let catalogo = document.getElementById("main");
 let btnAgregar = document.getElementById("btnAgregar");
+let productosCarrito = [];
 
 
 
@@ -37,7 +38,14 @@ for(let i = 0 ; i<btnAdd.length ; i++)
 {
   
   btnAdd[i].addEventListener("click", function (event) {
-  console.log(productosFiltrado[i]);
+    event.preventDefault();    
+    console.log(productosFiltrado[i]);
+    if (localStorage.getItem("productosCarrito") != null) {
+      productosCarrito = JSON.parse(localStorage.getItem("productosCarrito"));
+    }
+    let productoAgregarCarrito = JSON.stringify(productosFiltrado[i]);
+    productosCarrito.push(JSON.parse(productoAgregarCarrito));
+    localStorage.setItem("productosCarrito", JSON.stringify(productosCarrito));
 
 });
 

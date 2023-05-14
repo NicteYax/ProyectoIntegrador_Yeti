@@ -31,7 +31,6 @@ window.addEventListener("load", function (event) {
                     </a>
                     <a class="navbar-brand" href="./catalogo.html"><strong>CATÁLOGO</strong>
                     </a>
-                    <a class="navbar-brand" href="./personaliza.html"><strong>PERSONALIZA</strong></a>
                     <a class="navbar-brand" href="./contacto.html"><strong>CONTACTO</strong></a>
                     <a class="navbar-brand" href="./acercade.html "><strong>NOSOTROS</strong></a>
                 </div>
@@ -65,9 +64,6 @@ window.addEventListener("load", function (event) {
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="./catalogo.html">CATÁLOGO</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./personaliza.html">PERSONALIZA TU YETI</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="./contacto.html">CONTACTO</a>

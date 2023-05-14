@@ -1,0 +1,45 @@
+#main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#carritoSeccion{
+    margin: 1rem 0;
+    padding: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 70%;
+    background-color: rgb(194, 194, 194);
+    align-items: center;
+    border-radius: 10px;
+}
+
+.cardProduct{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    background-color: white;
+    align-content: center;
+    justify-content: space-evenly;
+    padding-right: 2rem;
+    align-items: flex-start;
+    margin-top: -2rem;
+    border-radius: 10px;
+    margin-bottom: 2.5rem;
+}
+
+.imgCarrito{
+    width:20%;
+}
+
+.cardParts{
+    width: 20%;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+#btnBorrarCarrito{
+    margin-bottom: 4rem;
+}
