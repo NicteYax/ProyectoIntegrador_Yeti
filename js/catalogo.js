@@ -151,7 +151,7 @@ window.addEventListener("load", function (event) {
           },
          {
           "id": 17,  
-          "title": "Lonchera de bolsa Daytrip Rosa",
+          "title": "Lonchera bolsa Daytrip Rosa",
             "price": 2600,
             "description":
               "Tamaño para comida personal, construido para situaciones duraderas. Para 6 latas (solo)",
@@ -160,7 +160,7 @@ window.addEventListener("load", function (event) {
           },
           {
             "id": 18,
-            "title": "Lonchera de bolsa Daytrip Azul",
+            "title": "Lonchera bolsa Daytrip Azul",
             "price": 2600,
             "description":
               "Tamaño para comida personal, construido para situaciones duraderas. Para 6 latas (solo).",
@@ -169,7 +169,7 @@ window.addEventListener("load", function (event) {
           },
           {
             "id": 19,
-            "title": "Lonchera cuadrada naranja",
+            "title": "Lonchera cuadrada Naranja",
             "price": 2600,
             "description":
               "Protege y mantén el almuerzo seco bajo la lluvia o en un kayak.",
@@ -178,7 +178,7 @@ window.addEventListener("load", function (event) {
           },
           {
             "id": 20,
-            "title": "Lonchera cuadrada azul",
+            "title": "Lonchera cuadrada Azul",
             "price": 2600,
             "description":
               "Protege y mantén el almuerzo seco bajo la lluvia o en un kayak.",
@@ -304,7 +304,7 @@ window.addEventListener("load", function (event) {
           },
           {
             "id": 34,
-            "title": "Tazón para mascota Boomer 4",
+            "title": "Tazón mascota Boomer 4",
             "price": 800,
             "description":
               "Mantiene a los más pequeños alimentados e hidratados.",
@@ -313,7 +313,7 @@ window.addEventListener("load", function (event) {
           },
           {
             "id": 35,
-            "title": "Tazón para mascota Boomer 8",
+            "title": "Tazón mascota Boomer 8",
             "price": 1000,
             "description":
               "Extra fuerte y resistente a las abolladuras.",
@@ -322,7 +322,7 @@ window.addEventListener("load", function (event) {
           },
           {
             "id": 36,
-            "title": "Tapa para termo Yonder",
+            "title": "Tapa Yonder",
             "price": 260,
             "description":
               "Bloquee el líquido con confianza a prueba de fugas. Esta tapa se ajusta a su Yonder.",
@@ -331,7 +331,7 @@ window.addEventListener("load", function (event) {
           },
           {
             "id": 37,
-            "title": "Tapa para Hotshot",
+            "title": "Tapa Hotshot",
             "price": 260,
             "description":
               "A prueba de fugas, aislado y de tamaño perfecto para una preparación caliente.",
@@ -340,7 +340,7 @@ window.addEventListener("load", function (event) {
           },
           {
             "id": 38,
-            "title": "Tapa Magslider para Rambler Chico",
+            "title": "Tapa Magslider Rambler CH",
             "price": 200,
             "description":
               "El imán extraíble ayuda a sellar su bebida para mantener a raya las salpicaduras.",
@@ -349,7 +349,7 @@ window.addEventListener("load", function (event) {
           },
           {
             "id": 39,
-            "title": "Tapa Magslider para Rambler Mediano",
+            "title": "Tapa Magslider Rambler M",
             "price": 200,
             "description":
               "El imán extraíble ayuda a sellar su bebida para mantener a raya las salpicaduras.",
@@ -358,7 +358,7 @@ window.addEventListener("load", function (event) {
           },
           {
             "id": 40,
-            "title": "Tapa Magslider para Rambler Grande",
+            "title": "Tapa Magslider Rambler G",
             "price": 200,
             "description":
               "El imán extraíble ayuda a sellar su bebida para mantener a raya las salpicaduras.",
@@ -367,7 +367,7 @@ window.addEventListener("load", function (event) {
           },
           {
             "id": 41,
-            "title": "Tapa Magslider para Rambler Magdock",
+            "title": "Tapa Rambler Magdock",
             "price": 260,
             "description":
               "Acceda a su botella Rambler sobre la marcha sin perder la tapa. Esta tapa cabe en todas las botellas de agua Rambler.",
@@ -376,7 +376,7 @@ window.addEventListener("load", function (event) {
           },
           {
             "id": 42,
-            "title": "Tapa Magslider para Rambler Chug",
+            "title": "Tapa Magslider Rambler Chug",
             "price": 260,
             "description":
               "Sacia inmediatamente tu sed a través de la buena tecnología de chugging pasada de moda. Esta tapa cabe en todas las botellas de agua Rambler.",

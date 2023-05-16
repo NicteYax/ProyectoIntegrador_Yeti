@@ -27,12 +27,14 @@ for (let i = 0; i < btncantidad.length; i++) {
 
     btncantidad[i].addEventListener("blur", function (event) {
         event.preventDefault();  
-        console.log(btncantidad[i].value);
-        total += parseInt(btncantidad[i].value) * productosCarrito[i].price;
-        console.log(total);
-        totaltxt.textContent = "Total: $ " + total;
+        total=0;
+        for(let i = 0 ; i<productosCarrito.length ; i++)
+    {
+        total += parseInt(btncantidad[i].value) * productosCarrito[i].price; 
+    }
+    totaltxt.textContent = "Total: $ " + total;
 
-    });
+        });
 
 
 }
@@ -59,8 +61,6 @@ function mostrarProducto(productosCarrito) {
                   <div class="cardParts">
                   <h4 class="card-title"><strong>MODELO:</strong></h4>
                   <h5 class="card-title">${productosCarrito[i].title}</h5>
-                  <p class="card-text descriptionCard">${productosCarrito[i].description.slice(0, 40
-        )}...</p>
                 </div>
                 <div class="cardParts">
                 <h4 class="card-title"><strong>CANTIDAD:</strong></h4>

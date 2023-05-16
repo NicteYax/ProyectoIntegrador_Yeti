@@ -11,7 +11,7 @@ window.addEventListener("load", function (event) {
   }
 });
 
-if (sessionStorage.getItem("usuarioLogin") == null) {
+if (sessionStorage.getItem("usuarioLogin") == "NoLogin") {
   btnAgregar.style.display = "none";
 }
 else {
@@ -28,6 +28,36 @@ let productosFiltrado = [];
 productosFiltrado = producto.filter((producto) => producto.category == filtro);
 
 mostrarProducto(productosFiltrado);
+
+
+
+let btnAdd =  document.getElementsByName("btnAdd");
+
+//BTNS agregar carrito
+for(let i = 0 ; i<btnAdd.length ; i++)
+{
+  
+  btnAdd[i].addEventListener("click", function (event) {
+    event.preventDefault();    
+    console.log(productosFiltrado[i]);
+    if (localStorage.getItem("productosCarrito") != null) {
+      productosCarrito = JSON.parse(localStorage.getItem("productosCarrito"));
+    }
+    let productoAgregarCarrito = JSON.stringify(productosFiltrado[i]);
+    productosCarrito.push(JSON.parse(productoAgregarCarrito));
+    localStorage.setItem("productosCarrito", JSON.stringify(productosCarrito));
+
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Producto agregado al',
+      showConfirmButton: false,
+      timer: 1500
+
+    })
+});
+
+}
 
 function mostrarProducto(datos) {
 
@@ -58,7 +88,7 @@ function mostrarProducto(datos) {
                  <p class="text-end"><strong> $ ${datos[i].price} MXN </strong></p>
                   </div>
                   <div class="modal-footer">
-                  <button type="button" class="btn" data-bs-dismiss="modal">Añadir a carrito</button>
+                  <button type="button" class="btn" data-bs-dismiss="modal" name="btnAdd">Añadir a carrito</button>
                   </div>
                   </div>
                   </div>

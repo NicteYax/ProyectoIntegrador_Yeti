@@ -48,6 +48,14 @@ for(let i = 0 ; i<btnAdd.length ; i++)
     productosCarrito.push(JSON.parse(productoAgregarCarrito));
     localStorage.setItem("productosCarrito", JSON.stringify(productosCarrito));
 
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Producto agregado al',
+      showConfirmButton: false,
+      timer: 1500
+
+    })
 });
 
 }
