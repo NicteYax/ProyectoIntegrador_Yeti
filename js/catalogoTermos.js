@@ -34,6 +34,7 @@ mostrarProducto(productosFiltrado);
 
 let btnAdd =  document.getElementsByName("btnAdd");
 
+//BTNS agregar carrito
 for(let i = 0 ; i<btnAdd.length ; i++)
 {
   

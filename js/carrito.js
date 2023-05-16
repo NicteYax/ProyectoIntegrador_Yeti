@@ -2,11 +2,13 @@ let productosCarrito = JSON.parse(localStorage.getItem("productosCarrito"));
 let carritoSeccion = document.getElementById("carritoSeccion");
 let btnBorrarCarrito = document.getElementById("btnBorrarCarrito");
 let mensaje = document.getElementById("mensaje");
+let total = 0;
+let btncantidad = document.getElementsByName("cantidad");
+let totaltxt = document.getElementById("total");
 
 window.addEventListener("load", function (event) {
     if (localStorage.getItem("productosCarrito") != null) {
         productosCarrito = JSON.parse(localStorage.getItem("productosCarrito"));
-        mostrarProducto(productosCarrito);
         mensaje.style.visibility = "hidden";
 
     }
@@ -16,6 +18,35 @@ window.addEventListener("load", function (event) {
     }
 });
 
+if (localStorage.getItem("productosCarrito") != null) {
+
+mostrarProducto(productosCarrito);
+calcularTotal();
+
+for (let i = 0; i < btncantidad.length; i++) {
+
+    btncantidad[i].addEventListener("blur", function (event) {
+        event.preventDefault();  
+        console.log(btncantidad[i].value);
+        total += parseInt(btncantidad[i].value) * productosCarrito[i].price;
+        console.log(total);
+        totaltxt.textContent = "Total: $ " + total;
+
+    });
+
+
+}
+
+}
+
+function calcularTotal()
+{
+    for(let i = 0 ; i<productosCarrito.length ; i++)
+    {
+       total += 1 * productosCarrito[i].price; 
+    }
+    totaltxt.textContent = "Total: $ " + total;
+}
 
 function mostrarProducto(productosCarrito) {
 
@@ -33,24 +64,19 @@ function mostrarProducto(productosCarrito) {
                 </div>
                 <div class="cardParts">
                 <h4 class="card-title"><strong>CANTIDAD:</strong></h4>
-                <select class="form-select" aria-label="Default select example">
-                <option selected>Cantidad</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                </select>
+                <input type="text" class="form-control" name="cantidad" value=1 />
                 </div>
                 <div class="cardParts">
                 <h4 class="card-title"><strong>COLOR:</strong></h4>
                 <select class="form-select" aria-label="Default select example">
                 <option selected>Color</option>
-                <option value="1">Negro</option>
-                <option value="2">Azul</option>
-                <option value="3">Rojo</option>
+                <option value="Negro">Negro</option>
+                <option value="Azul">Azul</option>
+                <option value="Rojo">Rojo</option>
                 </select>
                 </div>
                 <div class="cardParts">
-                <h4 class="card-title"><strong>CANTIDAD:</strong></h4>
+                <h4 class="card-title"><strong>PRECIO UNITARIO:</strong></h4>
                 <p class="text-end"><strong> $ ${productosCarrito[i].price} MXN </strong></p>
                 </div>
                 </div>
@@ -69,5 +95,12 @@ btnBorrarCarrito.addEventListener("click", function (event) {
     window.location.href = "./carrito.html";
 
 });
+
+
+
+console.log(btncantidad);
+
+
+
 
 
