@@ -60,15 +60,15 @@ function mostrarProducto(productosCarrito) {
                   <img src="${productosCarrito[i].image}" class="card-img-top imgCarrito" alt="...">
                   <div class="cardParts">
                   <h4 class="card-title"><strong>MODELO:</strong></h4>
-                  <h5 class="card-title">${productosCarrito[i].title}</h5>
+                  <h5 class="card-title txt">${productosCarrito[i].title}</h5>
                 </div>
                 <div class="cardParts">
                 <h4 class="card-title"><strong>CANTIDAD:</strong></h4>
-                <input type="text" class="form-control" name="cantidad" value=1 />
+                <input type="text" class="form-control txt" name="cantidad" value=1 />
                 </div>
                 <div class="cardParts">
                 <h4 class="card-title"><strong>COLOR:</strong></h4>
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select txt" aria-label="Default select example">
                 <option selected>Color</option>
                 <option value="Negro">Negro</option>
                 <option value="Azul">Azul</option>
@@ -77,7 +77,7 @@ function mostrarProducto(productosCarrito) {
                 </div>
                 <div class="cardParts">
                 <h4 class="card-title"><strong>PRECIO UNITARIO:</strong></h4>
-                <p class="text-end"><strong> $ ${productosCarrito[i].price} MXN </strong></p>
+                <h5 class="card-title txt"><strong> $ ${productosCarrito[i].price} MXN </strong></h5>
                 </div>
                 </div>
               `;

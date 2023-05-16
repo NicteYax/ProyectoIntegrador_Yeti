@@ -10,7 +10,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 70%;
+    width: 90%;
     background-color: rgb(194, 194, 194);
     align-items: center;
     border-radius: 10px;
@@ -20,6 +20,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 90%;
+    height: 16rem;
     background-color: white;
     align-content: center;
     justify-content: space-evenly;
@@ -30,8 +31,12 @@
     margin-bottom: 2.5rem;
 }
 
+#cartTitle{
+    font-size: 3rem;
+}
 .imgCarrito{
     width:20%;
+    padding-left: 1rem;
 }
 
 .cardParts{
@@ -42,4 +47,40 @@
 
 #btnBorrarCarrito{
     margin-bottom: 4rem;
+}
+@media (max-width: 425px){
+    
+    .cardProduct{
+        display: flex;
+        align-items: center;
+        height: 35rem;
+    }
+    .imgCarrito{
+        width:80%;
+        padding-bottom: 2rem;
+      
+    }
+    .cardParts{
+        width: 50%;
+        margin: 0;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1000px){
+    .imgCarrito{
+        width:12%;
+    }
+    .cardParts{
+        font-size: 1rem;
+    }
+    .txt{
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 2000px){
+    .imgCarrito{
+        width:10%;
+    }
 }

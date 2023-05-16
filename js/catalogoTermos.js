@@ -51,9 +51,9 @@ for(let i = 0 ; i<btnAdd.length ; i++)
     Swal.fire({
       position: 'center',
       icon: 'success',
-      title: 'Producto agregado al',
+      title: 'Producto agregado al carrito',
       showConfirmButton: false,
-      timer: 1500
+      timer: 2000
 
     })
 });
