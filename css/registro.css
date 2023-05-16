@@ -43,7 +43,18 @@
     margin-left: 95%;
     }
 
-@media (max-width: 768px){
+@media (max-width: 1030px){
+
+    #togglePasswordRpt{
+        margin-left: 93%;
+        }
+    
+    #togglePassword{
+        margin-left: 93%;
+        }
+    }
+
+@media (max-width: 800px){
     #fRegistro {
         background-color: #E9E9E9;
         border-radius: 10px;
@@ -61,6 +72,14 @@
         margin-top: 0.3rem;
         width: 30rem;
     }
+
+    #togglePasswordRpt{
+        margin-left: 94%;
+        }
+
+    #togglePassword{
+        margin-left: 94%;
+        }
 }
 
 
@@ -83,6 +102,14 @@
     margin-top: 0.3rem;
     width: 22rem;
 }
+
+#togglePasswordRpt{
+    margin-left: 92%;
+    }
+
+#togglePassword{
+    margin-left: 92%;
+    }
 }
 
 @media (max-width: 380px){
@@ -135,10 +162,10 @@
     }
 
     #togglePassword{
-        margin-left: 90%;
+        margin-left: 89%;
     }
     
     #togglePasswordRpt{
-        margin-left: 90%;
+        margin-left: 89%;
     }
     }

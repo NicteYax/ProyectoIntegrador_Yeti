@@ -1,0 +1,83 @@
+* {
+    font-family: "Rajdhani";
+}
+
+#main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 90%;
+    margin-top: 8rem;
+    background-color: rgb(194, 194, 194);
+    border-radius: 10px;
+    margin-bottom: 3rem;
+}
+
+h1{
+    text-align: center;
+    margin: 2rem;
+    font-weight: bold;
+    color: rgb(29, 38, 64, 1);
+    font-size: 3rem;
+}
+
+#pagoTittle{
+    text-align: center;
+}
+
+.imgPago{
+    width: 13rem;
+}
+
+#PagoSeccion{
+grid-column: 1/6;
+}
+
+.form-check{
+    grid-column: 1/6;
+    padding-left: 40%;
+    padding-top: 2rem;
+}
+
+#EnvioSeccion {
+    grid-column: 7/12;
+    padding-bottom: 4rem;
+}
+
+.form-label {
+    margin-top: 1rem;
+}
+
+@media (max-width: 800px) {
+
+    .form-check{
+        grid-column: 1/6;
+        padding-left: 20%;
+        padding-top: 3rem;
+    }
+
+    #EnvioSeccion {
+        grid-column: 7/13;
+        padding-bottom: 2rem;
+    }
+
+}
+
+@media (max-width: 430px) {
+
+    #PagoSeccion {
+        grid-column: 1/13;
+    }
+
+    .form-check{
+        padding-top: 0;
+    }
+    
+    #EnvioSeccion {
+        grid-column: 1/13;
+        padding-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    #fControl{
+        padding-top: 0;
+    }
+}

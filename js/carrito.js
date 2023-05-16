@@ -14,7 +14,7 @@ window.addEventListener("load", function (event) {
     }
     else {
         btnBorrarCarrito.style.display = "none";
-
+        btnPagar.style.display = "none";
     }
 });
 
@@ -84,9 +84,6 @@ function mostrarProducto(productosCarrito) {
 
         carritoSeccion.insertAdjacentHTML("beforeend", card);
     }
-
-
-
 }
 
 btnBorrarCarrito.addEventListener("click", function (event) {
@@ -96,11 +93,7 @@ btnBorrarCarrito.addEventListener("click", function (event) {
 
 });
 
-
-
-console.log(btncantidad);
-
-
-
-
-
+btnPagar.addEventListener("click", function (event) {
+    event.preventDefault();
+    window.location.href = "./pago.html";
+});

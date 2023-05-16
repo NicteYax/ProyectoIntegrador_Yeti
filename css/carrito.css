@@ -46,8 +46,21 @@
 }
 
 #btnBorrarCarrito{
-    margin-bottom: 4rem;
+    margin-right: 1rem;
 }
+
+#btnPagar{
+    margin-left: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+#buttons {
+    display: inline-block;
+    margin-bottom: 4rem;
+    margin-top: 1.5rem;
+}
+
 @media (max-width: 425px){
     
     .cardProduct{
@@ -64,6 +77,22 @@
         width: 50%;
         margin: 0;
         text-align: center;
+    }
+
+    #buttons {
+        display: flex;
+        margin-bottom: 4rem;
+        margin-top: 1.5rem;
+    }
+
+    #btnBorrarCarrito{
+        margin-right: 0.5rem;
+    }
+    
+    #btnPagar{
+        margin-left: 0.5rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
     }
 }
 
