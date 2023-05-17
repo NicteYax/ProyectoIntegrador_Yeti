@@ -1,7 +1,7 @@
 let btnLogOut = document.getElementById("btnLogOut");
 let user = document.getElementById("user");
 
-if ((sessionStorage.getItem("usuarioLogin") != null)) {
+if ((sessionStorage.getItem("usuarioLogin") != null)||(sessionStorage.getItem("usuarioLogin") != "NoLogin")) {
     let usuario = JSON.parse(sessionStorage.getItem("usuarioLogin"));
 
     user.insertAdjacentHTML("beforeend", `${usuario.nombre}`);

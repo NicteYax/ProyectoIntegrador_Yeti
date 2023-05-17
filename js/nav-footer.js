@@ -13,7 +13,8 @@ window.addEventListener("load", function (event) {
         sessionStorage.setItem("usuarioLogin","NoLogin");
 
         direccionLogin = "./login.html";
-    } else {
+    } 
+    if (sessionStorage.getItem("usuarioLogin") != "NoLogin"){
         direccionLogin = "./user.html";
     }
 
