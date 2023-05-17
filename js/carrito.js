@@ -70,7 +70,7 @@ function borrarProducto(index) {
     productosCarrito.splice(index, 1);
     localStorage.setItem("productosCarrito", JSON.stringify(productosCarrito));
     carritoSeccion.innerHTML = "";
-    if (localStorage.getItem("productosCarrito") != null && productosCarrito.length == 1) {
+    if (localStorage.getItem("productosCarrito") != null && productosCarrito.length >= 1) {
         productosCarrito = JSON.parse(localStorage.getItem("productosCarrito"));
         mensaje.style.visibility = "hidden";
         mostrarProducto(productosCarrito);

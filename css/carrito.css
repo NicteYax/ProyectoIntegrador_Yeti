@@ -46,6 +46,7 @@
 .imgCarrito{
     width:20%;
     padding-left: 1rem;
+    padding-top: 1%;
 }
 
 .cardParts{
@@ -77,14 +78,15 @@
     }
     .cardProduct{
         display: flex;
-        height: 37rem;
+        height: 38rem;
         padding-right: 0;
         margin-bottom: 3rem;
     }
     .imgCarrito{
-        width:70%;
+        width: 60%;
         padding-bottom: 2rem;
         padding-left: 0;
+        padding-top: 0%;
       
     }
     .cardParts{

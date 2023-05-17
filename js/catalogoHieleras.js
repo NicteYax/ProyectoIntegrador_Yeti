@@ -2,6 +2,7 @@ let producto = JSON.parse(localStorage.getItem("datos"));
 let filtro = "Hieleras";
 let catalogo = document.getElementById("main");
 let btnAgregar = document.getElementById("btnAgregar");
+let productosCarrito = [];
 
 window.addEventListener("load", function (event) {
   if (localStorage.getItem("datos") != null) {
