@@ -1,30 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rajdhani" />
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./src/corona.png">
-    <title>Personaliza tu Yeti</title>
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/personaliza.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Rajdhani"
+    />
+    <title>Personalizado</title>
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+  </head>
 
-<body id="body">
+  <body id="body">
 
-    <main class="container-fluid contenedor " id="main">
+    <!--CONTAINER-->
+    <main class="container-fluid contenedor" id="main">
+      <section class="contactPage">
+        <!--SECTION BANNER-->
+        <article id="banner">
+          <img src="./src/personaliza/yetiPersonalizadoBanner.png" alt="bannerContacto" width="100%"/>
+          <h1 id="titleContact">DINOS COMO QUIERES TU YETI PERSONALIZADO</h1>
+        </article>
+        <!--SECTION LOCALITATION-->
+        <article id="instructions">
+          <h3>INSTRUCCIONES</h3>
+          <p id="steps">
+            1. Elige que quieres que diga tu YETI PersonalizadoMX.<br/>
+            2. Elige el tipo de letra y el tamaño.<br/>
+            3. Elige si quieres que se lea de forma vertical, horizontal <br/> o si lo deseas como un patrón.<br/>
+            4. Si deseas una imagen o diseño en específico nos puedes enviar una imagen.<br/>
+            <br/>
+            ¡Recuerda que puedes elegir una palabra o frase, una imagen o ambas!
+          </p>
+        </article>
 
+        <!--FORM CONTROL-->
+        <article id="fControl">
+          <form class="contactForm">
+            <div
+              class="alert alert-danger fade show"
+              style="display: none"
+              role="alert"
+              id="alertVal"
+            >
+              <p id="alertValText"></p>
+            </div>
+            <!-- WORD/ PHRASE -->
+            <div class="info" id="formPhrase">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Palabra o frase:</label
+              >
+              <input type="text" class="form-control" id="phrase" />
+            </div>
+            <!-- FONT TYPE -->
+            <div class="info" id="formPhone">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Tipo de fuente:</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="font"
+              />
+            </div>
+            <!-- FONT SIZE -->
+            <div class="info" id="formMail">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Tamaño:</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="size"
+                placeholder="Tamaño del alto de letra en centímetros"
+              />
+            </div>
+            <!-- DIRECTION -->
+            <div class="info" id="formDirection">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Elige:</label
+                >
+                </br>
+                <div>
+                    <label for="vertical"> Vertical</label>
+                    <input
+                    type="radio"
+                    class="form-control"
+                    id="vertical"
+                    name="direction"
+                    value="Vertical"
+                    />
+                
+                    <label for="horizontal">Horizontal</label>
+                    <input
+                    type="radio"
+                    class="form-control"
+                    id="horizontal"
+                    name="direction"
+                    value="Horizontal" 
+                    />
+                
+                    <label for="pattern">Patrón</label>
+                    <input
+                    type="radio"
+                    class="form-control"
+                    id="pattern"
+                    name="direction"
+                    value="Patrón" 
+                    checked/>
+                </div>
+              </div>
+            <!-- URL IMG -->
+        <div>
+            <div class="info form-group">
+              <label for="fileImage">Comparténos tu diseño</label>
+              <input type="button" class="form-control btn-primary" value="ADJUNTAR IMAGEN" id="btnFake">
+              <input type="file" class="form-control-file" id="fileImage" style="display:none" accept="image/png, image/jpeg">
+            </div>
+          </div>
+          <div class="col-6">
+            <img id="imageFile" name="imageFile" src="" alt="Vista previa de la imagen" title="Vista previa de la imagen"
+              style="display: none;" />
+          </div><!--col-6-->
+          </div> <!--row-->
+          <div class="row">
+            <div class="col-10">
+              <p type="hidden" class="form-control" data-toggle="tooltip" data-placement="bottom" id="inputFile"
+                name="inputFile" value="" placehodler="Imagen del curso" title="Imagen" style="display:none"></p>
+            <!-- BUTTON -->
+            <button type="button" class="btn" id="btnSend">
+              ENVIAR
+            </button>
+          </form>
+        </article>
+      </section>
     </main>
-    
+    <br />
 
-
+    <!--SCRIPTS-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
     <script src="./js/contacto.js" defer></script>
     <script src="./js/nav-footer.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-
-</body>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<!--Email-->
+<script type="text/javascript">
+   (function(){
+      emailjs.init("ml7wSzcUWJaTSB_MQ");
+   })();
+</script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
